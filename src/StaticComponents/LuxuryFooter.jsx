@@ -1,0 +1,350 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Gift, 
+  Heart, 
+  Star, 
+  Crown,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
+  ArrowUp,
+  Send,
+  Sparkles
+} from 'lucide-react';
+import logo from '../assets/StaticImg/BrandLogo.png';
+
+const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [email, setEmail] = useState('');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [hoveredSocial, setHoveredSocial] = useState(null);
+  const sectionRef = useRef(null);
+
+  // Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Scroll-to-top visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    console.log('Newsletter subscription:', email);
+    setEmail('');
+  };
+
+  // Quick Links Data
+  const quickLinks = [
+    { icon: Gift, label: 'Shop All', href: '#' },
+    { icon: Heart, label: 'Gift Boxes', href: '#' },
+    { icon: Star, label: 'Personalized Gifts', href: '#' },
+    { icon: Crown, label: 'Luxury Collections', href: '#' },
+    { icon: Sparkles, label: 'Occasions', href: '#' }
+  ];
+
+  // Social Media Links
+  const socialLinks = [
+    { icon: Facebook, label: 'Facebook', href: '#', color: 'hover:text-blue-400' },
+    { icon: Instagram, label: 'Instagram', href: '#', color: 'hover:text-pink-400' },
+    { icon: Twitter, label: 'Twitter', href: '#', color: 'hover:text-sky-400' },
+    { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'hover:text-blue-600' },
+    { icon: Youtube, label: 'YouTube', href: '#', color: 'hover:text-red-500' }
+  ];
+
+  return (
+    <footer ref={sectionRef} className="relative bg-[#221F20] overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" // Replace with your image, e.g., '../../assets/HomeImg/footerbg.jpg'
+          alt="Luxury footer background"
+          className="w-full h-full object-cover opacity-20"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#221F20]/90 via-[#221F20]/70 to-[#221F20]/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#133FAD]/20 via-transparent to-[#ED3237]/20"></div>
+      </div>
+
+      {/* Animated Orbs */}
+      <div className="absolute inset-0 z-10">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-[#133FAD]/15 to-[#FFD700]/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-br from-[#ED3237]/15 to-[#FFD700]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 left-1/4 w-24 h-24 bg-gradient-to-br from-[#FFD700]/10 to-[#133FAD]/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </div>
+
+      {/* Sparkle Particles */}
+      <div className="absolute inset-0 z-10 overflow-hidden">
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-[#FFD700] rounded-full animate-twinkle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          ></div>
+        ))}
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8 z-20">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+          {/* Section 1: Logo & Description */}
+          <div className={`transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#FFD700]/50 transition-all duration-500 h-full">
+              {/* Logo */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="relative w-12 h-12">
+                  <img src={logo} alt="LuxuryGifts Logo" className="w-full h-full object-contain" />
+                  <div className="absolute -inset-1 bg-gradient-to-br from-[#ED3237]/30 to-[#FFD700]/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-[#FFD700] to-[#ED3237] bg-clip-text text-transparent">
+                  LuxuryGifts
+                </h3>
+              </div>
+              {/* Description */}
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Elevate every occasion with our curated collection of premium gifts, designed to bring joy and sophistication to life’s special moments.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 2: Address & Contact Info */}
+          <div className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#FFD700]/50 transition-all duration-500 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-[#ED3237]/20 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-[#ED3237]" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Contact Info</h3>
+              </div>
+              <div className="space-y-6">
+                {/* Address */}
+                <div className="group">
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-[#221F20]/20 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300">
+                    <div className="w-8 h-8 bg-[#ED3237]/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:animate-spin-slow">
+                      <MapPin className="w-4 h-4 text-[#FFD700]" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold text-sm mb-1">Address</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        123 Gift Lane, Elegance City, 12345
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Phone */}
+                <div className="group">
+                  <div className="flex items-center gap-4 p-4 rounded-xl bg-[#221F20]/20 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300">
+                    <div className="w-8 h-8 bg-[#133FAD]/20 rounded-lg flex items-center justify-center group-hover:animate-spin-slow">
+                      <Phone className="w-4 h-4 text-[#FFD700]" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold text-sm mb-1">Phone</h4>
+                      <p className="text-gray-400 text-sm">+1 (555) 789-0123</p>
+                    </div>
+                  </div>
+                </div>
+                {/* Email */}
+                <div className="group">
+                  <div className="flex items-center gap-4 p-4 rounded-xl bg-[#221F20]/20 border border-white/10 hover:border-[#FFD700]/30 transition-all duration-300">
+                    <div className="w-8 h-8 bg-[#FFD700]/20 rounded-lg flex items-center justify-center group-hover:animate-spin-slow">
+                      <Mail className="w-4 h-4 text-[#FFD700]" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold text-sm mb-1">Email</h4>
+                      <p className="text-gray-400 text-sm">support@luxurygifts.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 3: Quick Links */}
+          <div className={`transform transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#FFD700]/50 transition-all duration-500 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-[#133FAD]/20 rounded-xl flex items-center justify-center">
+                  <Gift className="w-5 h-5 text-[#133FAD]" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Quick Links</h3>
+              </div>
+              <div className="space-y-2">
+                {quickLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="group flex items-center gap-4 p-3 rounded-xl bg-[#221F20]/20 border border-white/10 hover:border-[#FFD700]/30 hover:bg-[#FFD700]/5 transition-all duration-300 hover:translate-x-2 relative"
+                  >
+                    <div className="w-8 h-8 bg-[#133FAD]/20 rounded-lg flex items-center justify-center group-hover:bg-[#FFD700]/30 transition-all duration-300">
+                      <link.icon className="w-4 h-4 text-[#133FAD] group-hover:text-[#FFD700] group-hover:animate-bounce" />
+                    </div>
+                    <span className="text-gray-400 group-hover:text-white transition-colors duration-300 font-medium">
+                      {link.label}
+                    </span>
+                    {/* Sparkle Trail */}
+                    <div
+                      className="absolute inset-0 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:animate-sparkle-trail"
+                    >
+                      <div className="w-2 h-2 bg-[#FFD700] rounded-full blur-sm"></div>
+                      <div className="w-1.5 h-1.5 bg-[#FFD700] rounded-full blur-sm ml-2"></div>
+                      <div className="w-1 h-1 bg-[#FFD700] rounded-full blur-sm ml-2"></div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Section 4: Follow Us & Newsletter */}
+          <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#FFD700]/50 transition-all duration-500 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-[#ED3237]/20 rounded-xl flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-[#ED3237]" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Follow Us</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                Stay connected for exclusive gift ideas, promotions, and inspiration.
+              </p>
+              {/* Social Media Grid */}
+              <div className="grid grid-cols-3 gap-3 mb-6">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className={`group relative w-full aspect-square bg-[#221F20]/30 rounded-xl border border-white/20 hover:border-[#FFD700]/50 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 ${social.color}`}
+                    onMouseEnter={() => setHoveredSocial(social.label)}
+                    onMouseLeave={() => setHoveredSocial(null)}
+                  >
+                    <social.icon className="w-5 h-5 text-gray-400 group-hover:text-current transition-colors duration-300" />
+                    {/* Tooltip */}
+                    {hoveredSocial === social.label && (
+                      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-[#221F20]/80 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-lg whitespace-nowrap">
+                        {social.label}
+                      </div>
+                    )}
+                    {/* Hover Glow */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#FFD700]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </a>
+                ))}
+              </div>
+              {/* Newsletter Form */}
+              <div className="mt-8">
+                <h4 className="text-white font-semibold text-sm mb-4">Newsletter</h4>
+                <form onSubmit={handleNewsletterSubmit} className="flex items-center gap-2">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email address"
+                    className="flex-grow px-4 py-2 bg-[#221F20]/50 border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#FFD700] transition-all duration-300"
+                    required
+                    aria-label="Newsletter email input"
+                  />
+                  <button
+                    type="submit"
+                    className="w-10 h-10 bg-gradient-to-r from-[#133FAD] to-[#ED3237] rounded-lg flex items-center justify-center hover:bg-[#FFD700] transition-all duration-300"
+                    aria-label="Submit newsletter subscription"
+                  >
+                    <Send className="w-5 h-5 text-white" />
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div
+          className={`border-t border-white/20 pt-8 transform transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div className="flex items-center gap-2 text-gray-500 text-sm">
+              <span>© 2025 LuxuryGifts. All rights reserved.</span>
+              <span>Designed by <span className="text-[#FFD700]">GiftSpark Studio</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-[#133FAD]/80 to-[#ED3237]/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg shadow-[#133FAD]/30 hover:scale-110 transition-all duration-300 z-50 group"
+          aria-label="Scroll to top"
+        >
+          <div className="absolute inset-0 transform rotate-45 bg-gradient-to-br from-[#FFD700]/50 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-spin-slow rounded"></div>
+          <ArrowUp className="w-5 h-5 text-white relative z-10 group-hover:text-[#FFD700] transition-colors duration-300" />
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+            <div className="absolute top-1 left-1 w-1.5 h-1.5 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '0.1s' }}></div>
+            <div className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '0.3s' }}></div>
+          </div>
+        </button>
+      )}
+
+      <style jsx>{`
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.3; transform: scale(0.5); }
+          50% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes sparkle-trail {
+          0% { transform: translateX(-100%); opacity: 0; }
+          50% { transform: translateX(0); opacity: 1; }
+          100% { transform: translateX(100%); opacity: 0; }
+        }
+        @keyframes spin-slow {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .animate-twinkle {
+          animation: twinkle 2s ease-in-out infinite;
+        }
+        .animate-sparkle-trail {
+          animation: sparkle-trail 0.5s ease-out forwards;
+        }
+        .animate-spin-slow {
+          animation: spin-slow 10s linear infinite;
+        }
+      `}</style>
+    </footer>
+  );
+};
+
+export default Footer;

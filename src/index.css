@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Antic+Didone&family=Dancing+Script:wght@400..700&family=Forum&family=Gilda+Display&family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Megrim&family=Playball&family=Saira:ital,wght@0,100..900;1,100..900&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&family=Ysabeau+SC:wght@300&display=swap');
+@import "tailwindcss";
+
+.heading {
+  font-family: "Playball", cursive;
+  /* font-weight: 400; */
+  font-style: italic;
+}
+
+.headingChild {
+  font-family: "Ysabeau SC", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 300; */
+  font-style: normal;
+}
+
+.antic {
+  font-family: "Antic Didone", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* leafFall  */
+
+
+@keyframes fall {
+    0% {
+      transform: translateY(-100px) translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: translateY(25vh) translateX(-40px) rotate(20deg);
+    }
+    50% {
+      transform: translateY(50vh) translateX(40px) rotate(-20deg);
+    }
+    75% {
+      transform: translateY(75vh) translateX(-30px) rotate(15deg);
+    }
+    100% {
+      transform: translateY(100vh) translateX(30px) rotate(0deg);
+      opacity: 0.5;
+    }
+  }
+  
+  .leaf {
+    position: fixed; /* Ensure it stays above all content */
+    top: -10%; /* Start slightly above the viewport */
+    width: 50px; /* Adjust as needed */
+    opacity: 5;
+    animation: fall linear infinite;
+    z-index: 9999; /* Ensure it stays on top */
+    pointer-events: none; /* Prevent interaction */
+  }
+  .leaf:nth-child(1) {
+    left: 10%;
+    animation-duration: 14s;
+    animation-delay: 0s;
+  }
+  
+  .leaf:nth-child(2) {
+    left: 25%;
+    animation-duration: 16s;
+    animation-delay: 2s;
+  }
+  
+  .leaf:nth-child(3) {
+    left: 45%;
+    animation-duration: 12s;
+    animation-delay: 3s;
+  }
+  
+  .leaf:nth-child(4) {
+    left: 65%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+  }
+  
+  .leaf:nth-child(5) {
+    left: 85%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+  }
+  
