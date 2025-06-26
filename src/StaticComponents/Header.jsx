@@ -36,10 +36,10 @@ const Header = () => {
       icon: <Package className="w-5 h-5" />,
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Birthday Gifts', icon: <Gift className="w-4 h-4" />, href: '#' },
-        { name: 'Wedding Collection', icon: <Heart className="w-4 h-4" />, href: '#' },
-        { name: 'Premium Gifts', icon: <Crown className="w-4 h-4" />, href: '#' },
-        { name: 'Corporate Gifts', icon: <Star className="w-4 h-4" />, href: '#' }
+        { name: 'Trophy', icon: <Gift className="w-4 h-4" />, href: '#' },
+        { name: 'Calender', icon: <Heart className="w-4 h-4" />, href: '#' },
+        { name: 'Table Clock', icon: <Crown className="w-4 h-4" />, href: '#' },
+        { name: 'Table Top', icon: <Star className="w-4 h-4" />, href: '#' }
       ]
     },
     { name: 'Gallery', href: '#', icon: <Image className="w-5 h-5" /> },
