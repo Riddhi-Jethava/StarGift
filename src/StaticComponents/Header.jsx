@@ -239,23 +239,7 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* Mobile Menu Footer */}
-        <div className="p-6 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white">
-          <div className="text-center">
-            <p className="text-sm text-gray-600 mb-2">Follow us</p>
-            <div className="flex justify-center space-x-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-[#ED3237] to-[#133FAD] rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">f</span>
-              </div>
-              <div className="w-8 h-8 bg-gradient-to-r from-[#ED3237] to-[#133FAD] rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">t</span>
-              </div>
-              <div className="w-8 h-8 bg-gradient-to-r from-[#ED3237] to-[#133FAD] rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">i</span>
-              </div>
-            </div>
-          </div>
-        </div>
+     
       </div>
       </div >
 

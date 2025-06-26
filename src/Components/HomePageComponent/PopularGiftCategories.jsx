@@ -270,11 +270,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Gift, Heart, Users, Briefcase, Star, Sparkles, ArrowRight, Crown, Gem, Trophy } from 'lucide-react';
-import bgImg from '../../assets/HomeImg/bg1.jpg'
+// import bgImg from '../../assets/HomeImg/bg1.jpg'
 import cat1 from '../../assets/HomeImg/cat (3).jpg'
 import cat2 from '../../assets/HomeImg/cat (2).jpg'
 import cat3 from '../../assets/HomeImg/cat (4).jpg'
 import cat4 from '../../assets/HomeImg/cat (1).jpg'
+import taddy from '../../assets/StaticImg/taddy.png'
+import rabbit from '../../assets/StaticImg/rabit.png'
 
 const PopularGiftCategories = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -345,6 +347,28 @@ const PopularGiftCategories = () => {
 
   return (
     <div className="relative py-20 px-10 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+      <img src={rabbit} className='w-60 absolute -bottom-18 -left-3 z-20'/>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="floating-gift absolute top-20 left-10 text-[#ED3237]/20 animate-bounce">
+          <Gift size={40} />
+        </div>
+        <div className="floating-gift absolute top-32 right-20 text-[#133FAD]/20 animate-pulse">
+          <Heart size={35} />
+        </div>
+        {/* <div className="floating-gift absolute bottom-32 left-20 text-[#221F20]/20 animate-bounce">
+          <Sparkles size={45} />
+        </div> */}
+        <div className="floating-gift absolute top-1/2 right-10 text-[#ED3237]/20 animate-pulse">
+          <Gift size={30} />
+        </div>
+        <div className="floating-gift absolute bottom-20 right-32 text-[#133FAD]/20 animate-bounce">
+          <Heart size={38} />
+        </div>
+
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-[#133FAD]/15 via-[#ED3237]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-[#ED3237]/15 via-[#133FAD]/10 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#221F20]/10 via-[#ED3237]/5 to-transparent rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
       {/* Advanced Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Animated Gradient Orbs */}
@@ -402,13 +426,14 @@ const PopularGiftCategories = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
+          <div className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
             <Crown className="w-5 h-5 text-[#6787d7]" />
             <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">Premium Collection</span>
+            <img src={taddy} alt="" className='w-30 absolute -top-20 left-15' />
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#969394] via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
               Popular Gift Categories
             </span>
           </h2>
@@ -528,7 +553,7 @@ const PopularGiftCategories = () => {
 
         {/* Bottom CTA with Morphing Effect */}
         <div className="text-center mt-16">
-          <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-gray-100 to-gray-200  border-2 border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
+          <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400  border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
             {/* Morphing Background Layers */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-[#ED3237]/30 to-[#133FAD]/30 rounded-full transform rotate-0 group-hover/main:rotate-180 transition-transform duration-1000 ease-in-out opacity-0 group-hover/main:opacity-100"></div>
@@ -540,11 +565,11 @@ const PopularGiftCategories = () => {
 
             {/* Button Content */}
             <div className="relative z-10 flex items-center space-x-4">
-              <span className="text-lg font-bold text-gray-700 transition-all duration-500 inset-0 group-hover/main:text-white group-hover/main:tracking-wider group-hover/main:drop-shadow-lg">
+              <span className="text-lg font-bold text-[#d0cbcd] transition-all duration-500 inset-0 group-hover/main:text-white group-hover/main:tracking-wider group-hover/main:drop-shadow-lg">
                 View All Categories
               </span>
               <div className="relative">
-                <Users className="w-6 h-6 text-gray-700 transition-all duration-700 group-hover/main:text-white group-hover/main:rotate-360 group-hover/main:scale-125" />
+                <Users className="w-6 h-6 text-[#d0cbcd] transition-all duration-700 group-hover/main:text-white group-hover/main:rotate-360 group-hover/main:scale-125" />
                 {/* Orbital Elements */}
                 <div className="absolute -inset-4 opacity-0 group-hover/main:opacity-100 transition-opacity duration-500">
                   <div className="absolute top-0 left-1/2 w-1 h-1 bg-white rounded-full animate-ping transform -translate-x-1/2" style={{ animationDelay: '0.2s' }}></div>

@@ -65,7 +65,7 @@ const CategoryShowcase = () => {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-b from-white to-gray-50/30 py-8 sm:py-12">
+    <div className="w-full bg-gradient-to-br from-gray-50 via-white to-gray-100 py-8 sm:py-12">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Categories Grid */}
         <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden">

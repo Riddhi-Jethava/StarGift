@@ -46,7 +46,7 @@
   .leaf {
     position: fixed; /* Ensure it stays above all content */
     top: -10%; /* Start slightly above the viewport */
-    width: 50px; /* Adjust as needed */
+    width: 40px; /* Adjust as needed */
     opacity: 5;
     animation: fall linear infinite;
     z-index: 9999; /* Ensure it stays on top */

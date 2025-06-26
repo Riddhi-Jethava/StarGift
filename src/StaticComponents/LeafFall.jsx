@@ -1,5 +1,5 @@
 import React from "react";
-import leafImage1 from "../assets/StaticImg/ribbon.png"; // First leaf image
+import leafImage1 from "../assets/StaticImg/red.png"; // First leaf image
 // import leafImage2 from "../assets/leaf2.png"; // Second leaf image
 
 const LeafFall = () => {

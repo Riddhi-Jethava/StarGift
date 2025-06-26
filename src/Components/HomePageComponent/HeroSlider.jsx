@@ -4,6 +4,7 @@ import fixedBgImage from '../../assets/HomeImg/sliderbg.jpg'
 import s1 from '../../assets/HomeImg/gift (1).jpg'
 import s2 from '../../assets/HomeImg/gift (2).jpg'
 import s3 from '../../assets/HomeImg/gift (3).jpg'
+import taddy from '../../assets/HomeImg/panda.png'
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -149,6 +150,7 @@ const HeroSlider = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      <img src={taddy} alt="" className='w-36 absolute bottom-0 -left-5 opacity-50 z-30' />
       {/* Static Background Image */}
       <div className="absolute inset-0">
         <img

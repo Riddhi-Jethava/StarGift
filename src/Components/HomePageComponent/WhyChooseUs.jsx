@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import textImg from '../../assets/HomeImg/gift (1).jpg'
 import ribbon from '../../assets/HomeImg/ribbon.png'
+import taddy from '../../assets/StaticImg/taddy.png'
 
 const WhyChooseUs = () => {
     const [visibleItems, setVisibleItems] = useState([]);
@@ -109,7 +110,7 @@ const WhyChooseUs = () => {
 
     return (
         <div
-            className="relative py-16 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
+            className="relative py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
             ref={sectionRef}
         >
             {/* Advanced Background Effects */}
@@ -174,6 +175,7 @@ const WhyChooseUs = () => {
                                 />
                             ))}
                         </div>
+                         <img src={taddy} alt="" className='w-30 absolute -top-20 left-25' />
                     </div>
 
                     {/* Main Title with Image Clipped to Text */}
@@ -232,7 +234,7 @@ const WhyChooseUs = () => {
                     </p>
 
                     {/* Stats Row with Enhanced Design */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 max-w-6xl mx-auto relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 max-w-7xl mx-auto relative">
                         {stats.map((stat, index) => {
                             const IconComponent = stat.icon;
                             return (

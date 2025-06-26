@@ -294,6 +294,8 @@ import s3 from '../../assets/HomeImg/gift (3).jpg'
 import cat1 from '../../assets/HomeImg/cat (3).jpg'
 import cat2 from '../../assets/HomeImg/cat (2).jpg'
 import cat3 from '../../assets/HomeImg/cat (4).jpg'
+import taddy from '../../assets/StaticImg/taddy.png'
+import box from '../../assets/StaticImg/pinkBox.png'
 
 
 const BestSellers = () => {
@@ -446,9 +448,10 @@ const BestSellers = () => {
 
     return (
         <div
-            className="relative py-10 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
+            className="relative py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
             ref={sectionRef}
         >
+            <img src={box} alt="" className='absolute w-65 -bottom-5 right-0 opacity-80 z-20'/>
             {/* Background Effects */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Animated Gradient Orbs */}
@@ -480,42 +483,25 @@ const BestSellers = () => {
             </div>
 
             <div className="container mx-auto relative z-10">
-                {/* Header Section */}
+
+
+                {/* Section Header */}
                 <div className="text-center mb-16">
-                    {/* Premium Badge */}
-                    <div
-                        className={`inline-flex items-center space-x-4 px-8 py-3 bg-gradient-to-r from-[#133FAD]/10 via-[#ED3237]/10 to-[#133FAD]/10 backdrop-blur-xl rounded-full border border-[#221F20]/10 shadow-2xl mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-                            }`}
-                    >
-                        <div className="relative">
-                            <TrendingUp className="w-6 h-6 text-[#ED3237]" />
-                            <div className="absolute -inset-2 bg-gradient-to-r from-[#ED3237]/20 to-[#133FAD]/20 rounded-full blur animate-pulse"></div>
-                        </div>
-                        <span className="text-lg font-bold bg-gradient-to-r from-[#221F20] via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent tracking-wider">
-                            People Loved These
-                        </span>
-                        <div className="flex items-center space-x-1">
-                            <Users className="w-5 h-5 text-[#133FAD]" />
-                            <ThumbsUp className="w-4 h-4 text-[#ED3237]" />
-                        </div>
+                    <div className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
+                        <TrendingUp className="w-5 h-5 text-[#6787d7]" />
+                        <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">People Loved These</span>
+                        <Users className="w-5 h-5 text-[#133FAD]" />
+                        <ThumbsUp className="w-4 h-4 text-[#ED3237]" />
+                         <img src={taddy} alt="" className='w-30 absolute -top-20 left-19' />
                     </div>
 
-                    {/* Main Title */}
-                    <h2
-                        className={`text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                            }`}
-                    >
-                        <span className="antic block uppercase bg-gradient-to-r from-[#221F20] via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent relative tracking-wider">
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                        <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
                             Best Sellers
-                            <div className="absolute -inset-4 bg-gradient-to-br from-[#133FAD]/5 to-[#ED3237]/5 blur-xl rounded-lg animate-pulse"></div>
                         </span>
                     </h2>
 
-                    {/* Subtitle */}
-                    <p
-                        className={`text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                            }`}
-                    >
+                    <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Discover our most coveted pieces, handpicked by thousands of satisfied customers who've made these treasures their favorites.
                     </p>
                 </div>
@@ -643,9 +629,9 @@ const BestSellers = () => {
                 </div>
 
                 {/* View All Button */}
-              
+
                 <div className="text-center mt-12">
-                    <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20] to-gray-600  border-2 border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
+                    <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400  b rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
                         {/* Morphing Background Layers */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>
                         <div className="absolute inset-0 bg-gradient-to-r from-[#ED3237]/30 to-[#133FAD]/30 rounded-full transform rotate-0 group-hover/main:rotate-180 transition-transform duration-1000 ease-in-out opacity-0 group-hover/main:opacity-100"></div>
@@ -657,11 +643,11 @@ const BestSellers = () => {
 
                         {/* Button Content */}
                         <div className="relative z-10 flex items-center space-x-4">
-                            <span className="text-lg font-bold text-[#969394] transition-all duration-500 inset-0 group-hover/main:text-white group-hover/main:tracking-wider group-hover/main:drop-shadow-lg">
+                            <span className="text-lg font-bold text-[#d0cbcd] transition-all duration-500 inset-0 group-hover/main:text-white group-hover/main:tracking-wider group-hover/main:drop-shadow-lg">
                                 View All Best Sellers
                             </span>
                             <div className="relative">
-                                <Sparkles className="w-6 h-6 text-[#969394] transition-all duration-700 group-hover/main:text-white group-hover/main:rotate-360 group-hover/main:scale-125" />
+                                <Sparkles className="w-6 h-6 text-[#d0cbcd] transition-all duration-700 group-hover/main:text-white group-hover/main:rotate-360 group-hover/main:scale-125" />
                                 {/* Orbital Elements */}
                                 <div className="absolute -inset-4 opacity-0 group-hover/main:opacity-100 transition-opacity duration-500">
                                     <div className="absolute top-0 left-1/2 w-1 h-1 bg-white rounded-full animate-ping transform -translate-x-1/2" style={{ animationDelay: '0.2s' }}></div>
