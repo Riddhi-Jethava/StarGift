@@ -139,7 +139,7 @@ const Footer = () => {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Section 1: Logo & Description */}
-          <div className={`transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div  data-aos="zoom-in-right" className={`transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#ED3237]/50 transition-all duration-500 h-full">
               {/* Logo */}
               <div className="flex items-center gap-3 mb-6">
@@ -156,7 +156,7 @@ const Footer = () => {
           </div>
 
           {/* Section 2: Address & Contact Info */}
-          <div className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div  data-aos="zoom-in-right" className={`transform transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#ED3237]/50 transition-all duration-500 h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-[#133FAD]/20 rounded-xl flex items-center justify-center">
@@ -213,7 +213,7 @@ const Footer = () => {
           </div>
 
           {/* Section 3: Quick Links */}
-          <div className={`transform transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div  data-aos="zoom-in-left" className={`transform transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#ED3237]/50 transition-all duration-500 h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-[#133FAD]/20 rounded-xl flex items-center justify-center">
@@ -249,7 +249,7 @@ const Footer = () => {
           </div>
 
           {/* Section 4: Follow Us */}
-          <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div  data-aos="zoom-in-left" className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20 hover:border-[#ED3237]/50 transition-all duration-500 h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-[#ED3237]/20 rounded-xl flex items-center justify-center">

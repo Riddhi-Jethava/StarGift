@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Gift, Globe, Heart, Sparkles, Crown, Star, Menu, X, Home, User, Package, Image, Phone } from 'lucide-react';
 import logo from '../assets/StaticImg/BrandLogo.png'
+import LanguageSelector from './LanguageSelector';
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -133,37 +134,7 @@ const Header = () => {
       {/* Right side - Language Selector & Mobile Menu Button */}
       <div className="flex items-center space-x-3 sm:space-x-4">
         {/* Language Selector */}
-        <div className="relative">
-          <button
-            onClick={() => setIsLangOpen(!isLangOpen)}
-            className="flex items-center space-x-2 bg-gradient-to-r from-gray-50 to-white border border-gray-200 px-2 sm:px-4 py-2 sm:py-2.5 rounded-full hover:from-[#ED3237]/10 hover:to-[#133FAD]/10 hover:border-[#ED3237]/20 transition-all duration-300 shadow-sm hover:shadow-md group"
-          >
-            <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600 group-hover:text-[#ED3237] transition-colors duration-300" />
-            <span className="text-xs sm:text-sm font-medium text-gray-700 group-hover:text-[#ED3237] transition-colors duration-300">EN</span>
-            <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-gray-500 group-hover:text-[#133FAD] transition-all duration-300 ${isLangOpen ? 'rotate-180' : ''}`} />
-          </button>
-
-          {/* Language Dropdown */}
-          {isLangOpen && (
-            <div className="absolute top-full right-0 mt-2 w-40 sm:w-48 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden animate-in slide-in-from-top-2 duration-200 z-50">
-              <div className="p-1">
-                {languages.map((lang, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setIsLangOpen(false)}
-                    className="w-full flex items-center space-x-2 sm:space-x-3 px-2 sm:px-3 py-2 sm:py-2.5 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-[#ED3237] hover:to-[#133FAD] rounded-lg transition-all duration-300 group/lang"
-                  >
-                    <span className="text-sm sm:text-lg">{lang.flag}</span>
-                    <div className="flex flex-col items-start">
-                      <span className="font-medium text-xs sm:text-sm">{lang.code}</span>
-                      <span className="text-xs opacity-60 group-hover/lang:opacity-80 hidden sm:block">{lang.name}</span>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+       <LanguageSelector />
 
         {/* Mobile Menu Button */}
         <button

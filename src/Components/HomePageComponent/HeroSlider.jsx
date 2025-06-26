@@ -149,8 +149,8 @@ const HeroSlider = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      <img src={taddy} alt="" className='w-36 absolute bottom-0 -left-5 opacity-50 z-30' />
+    <div className="relative w-full h-220 md:h-screen py-34 md:py-0 overflow-hidden">
+      <img src={taddy} alt="" className='w-25 md:w-36 absolute bottom-0 -left-5 opacity-50 z-30' />
       {/* Static Background Image */}
       <div className="absolute inset-0">
         <img

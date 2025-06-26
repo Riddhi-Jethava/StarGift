@@ -451,7 +451,7 @@ const BestSellers = () => {
             className="relative py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
             ref={sectionRef}
         >
-            <img src={box} alt="" className='absolute w-65 -bottom-5 right-0 opacity-80 z-20'/>
+            <img src={box} alt="" className='absolute w-40 md:w-65 -bottom-5 right-0 opacity-80 z-20'/>
             {/* Background Effects */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Animated Gradient Orbs */}
@@ -487,7 +487,7 @@ const BestSellers = () => {
 
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <div className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
+                    <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
                         <TrendingUp className="w-5 h-5 text-[#6787d7]" />
                         <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">People Loved These</span>
                         <Users className="w-5 h-5 text-[#133FAD]" />
@@ -495,13 +495,13 @@ const BestSellers = () => {
                          <img src={taddy} alt="" className='w-30 absolute -top-20 left-19' />
                     </div>
 
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                         <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
                             Best Sellers
                         </span>
                     </h2>
 
-                    <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Discover our most coveted pieces, handpicked by thousands of satisfied customers who've made these treasures their favorites.
                     </p>
                 </div>
@@ -529,7 +529,7 @@ const BestSellers = () => {
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {bestSellers.map((product, index) => (
-                            <div
+                            <div data-aos="zoom-in-up"
                                 key={product.id}
                                 className={`group relative flex-shrink-0 w-80 bg-white/20 backdrop-blur-3xl rounded-3xl border border-[#221F20]/10 hover:border-[#133FAD]/30 shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                                     }`}
@@ -630,7 +630,7 @@ const BestSellers = () => {
 
                 {/* View All Button */}
 
-                <div className="text-center mt-12">
+                <div  data-aos="zoom-in-up" className="text-center mt-12">
                     <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400  b rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
                         {/* Morphing Background Layers */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>

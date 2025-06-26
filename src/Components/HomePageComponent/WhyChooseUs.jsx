@@ -155,7 +155,7 @@ const WhyChooseUs = () => {
                 {/* Header Section */}
                 <div className="text-center">
                     {/* Premium Badge */}
-                    <div
+                    <div  data-aos="zoom-in-up"
                         className={`inline-flex items-center space-x-4 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 via-[#ED3237]/10 to-[#133FAD]/10 backdrop-blur-xl rounded-full border border-[#221F20]/10 shadow-2xl mb-10 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
                             }`}
                     >
@@ -179,7 +179,7 @@ const WhyChooseUs = () => {
                     </div>
 
                     {/* Main Title with Image Clipped to Text */}
-                    <h2
+                    <h2  data-aos="zoom-in-up"
                         className={`text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                     >
@@ -226,7 +226,7 @@ const WhyChooseUs = () => {
                     </h2>
 
                     {/* Subtitle */}
-                    <p
+                    <p  data-aos="zoom-in-up"
                         className={`text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-20 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                     >
@@ -238,7 +238,7 @@ const WhyChooseUs = () => {
                         {stats.map((stat, index) => {
                             const IconComponent = stat.icon;
                             return (
-                                <div
+                                <div  data-aos="zoom-in-up"
                                     key={index}
                                     className={`group relative p-8 bg-white/80 backdrop-blur-lg rounded-2xl border border-[#221F20]/10 hover:border-[#133FAD]/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                                         }`}

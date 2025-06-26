@@ -58,10 +58,10 @@ const AboutUs = () => {
 
             {/* Main Heading */}
             <div className="space-y-4 text-center">
-                <h3 className="heading absolute top-[8%] left-[33%] text-lg sm:text-7xl text-[#221F20] tracking-wider">
+                <h3 data-aos="zoom-in-up" className="heading lg:absolute top-[8%] left-[33%] text-2xl sm:text-7xl text-[#221F20] tracking-wider">
                     Celebrate
                 </h3>
-                <h1 className="absolute top-[22%] left-[36%] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                <h1 data-aos="zoom-in-up" className="lg:absolute top-[14%] md:top-[22%] left-[18.5%] md:left-[36%] text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                     <span className="antic bg-gradient-to-r from-[#221F20] via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent tracking-wide">
                         MOMENTS WITH US
                     </span>
@@ -72,13 +72,13 @@ const AboutUs = () => {
             <div className="container mx-auto px-4 py-16 lg:py-10 lg:px-26">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 h-126 items-center">
                     {/* Left Side - Images */}
-                    <div className="relative">
+                    <div data-aos="zoom-in-right" className="relative">
                         {/* Top Rounded Image */}
-                        <div className="relative flex justify-center lg:justify-start">
+                        <div className="md:relative top-[22vw] md:top-0 flex justify-center lg:justify-start">
                             <div className="relative">
                                 <div className="absolute -inset-2 bg-gradient-to-br from-[#133FAD] to-[#ED3237] rounded-t-full"></div>
                                 <div className="absolute -inset-1 bg-white rounded-t-full shadow-2xl"></div>
-                                <div className="relative w-64 h-64 sm:w-90 sm:h-110 rounded-t-full overflow-hidden group">
+                                <div className="relative w-65 h-65 lg:w-90  lg:h-110 rounded-t-full overflow-hidden group">
                                     <img
                                         src={img1}
                                         alt="Elegant gift item"
@@ -91,7 +91,7 @@ const AboutUs = () => {
                         </div>
 
                         {/* Bottom Square Image */}
-                        <div className="relative -top-45 -left-0 flex justify-center lg:justify-end">
+                        <div className="relative hidden top-[12vw] md:-top-45 left-[12vw]  md:-left-0 lg:flex justify-center lg:justify-end">
                             <div className="relative">
                                 <div className="absolute rounded-2xl -inset-2 bg-gradient-to-br from-[#ED3237] via-pink-500 to-[#133FAD] blur-sm opacity-10" style={{ animationDelay: '1.5s' }}></div>
                                 <div className="absolute -inset-2 bg-gradient-to-br from-[#ED3237] to-[#133FAD] rounded-2xl"></div>
@@ -110,22 +110,22 @@ const AboutUs = () => {
                     </div>
 
                     {/* Right Side - Content */}
-                    <div className="space-y-8 lg:px-8 text-center lg:text-left">
+                    <div  className="space-y-8 lg:px-8 text-center lg:text-left">
                         {/* Description */}
                         <div className="space-y-4">
-                            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed pt-8">
+                            <p data-aos="zoom-in-left" className="text-lg sm:text-xl text-gray-600 leading-relaxed pt-8">
                                 <span className="font-semibold text-[#221F20] italic">
                                     Craft Memories with Elegance, Celebrate Every Occasion with Gifts that Inspire Joy and Sophistication.
                                 </span>
                             </p>
-                            <div className="space-y-4 text-gray-600">
+                            <div data-aos="zoom-in-left" className="hidden lg:block space-y-4 text-gray-600">
                                 <p className="leading-relaxed">
                                     We believe every gift tells a story. Our carefully curated collection of premium gifts transforms ordinary moments into extraordinary memories.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="">
+                        <div data-aos="zoom-in-left" className="">
                             <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400 border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#ED3237]/30 to-[#133FAD]/30 rounded-full transform rotate-0 group-hover/main:rotate-180 transition-transform duration-1000 ease-in-out opacity-0 group-hover/main:opacity-100"></div>

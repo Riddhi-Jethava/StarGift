@@ -346,8 +346,8 @@ const PopularGiftCategories = () => {
   ];
 
   return (
-    <div className="relative py-20 px-10 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
-      <img src={rabbit} className='w-60 absolute -bottom-18 -left-3 z-20'/>
+    <div className="relative py-20 px-0 md:px-10 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+      <img src={rabbit} className='w-35 md:w-60 absolute -bottom-10 md:-bottom-18 -left-3 z-20'/>
       <div className="absolute inset-0 overflow-hidden">
         <div className="floating-gift absolute top-20 left-10 text-[#ED3237]/20 animate-bounce">
           <Gift size={40} />
@@ -426,19 +426,19 @@ const PopularGiftCategories = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
+          <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
             <Crown className="w-5 h-5 text-[#6787d7]" />
             <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">Premium Collection</span>
             <img src={taddy} alt="" className='w-30 absolute -top-20 left-15' />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
               Popular Gift Categories
             </span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover our exquisite collection of premium gifts, carefully curated to celebrate life's most precious moments with elegance and sophistication.
           </p>
         </div>
@@ -448,7 +448,7 @@ const PopularGiftCategories = () => {
           {categories.map((category, index) => {
             const IconComponent = category.icon;
             return (
-              <div
+              <div data-aos="zoom-in-right"
                 key={category.id}
                 className="group relative"
                 onMouseEnter={() => setHoveredCard(category.id)}
@@ -552,8 +552,8 @@ const PopularGiftCategories = () => {
         </div>
 
         {/* Bottom CTA with Morphing Effect */}
-        <div className="text-center mt-16">
-          <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400  border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
+        <div  className="text-center mt-16">
+          <button data-aos="zoom-in-up" className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400  border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
             {/* Morphing Background Layers */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-[#ED3237]/30 to-[#133FAD]/30 rounded-full transform rotate-0 group-hover/main:rotate-180 transition-transform duration-1000 ease-in-out opacity-0 group-hover/main:opacity-100"></div>

@@ -389,19 +389,19 @@ const TestimonialComponent = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
+          <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
             <Sparkles className="w-5 h-5 text-[#6787d7]" />
             <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">Customer Stories</span>
              <img src={taddy} alt="" className='w-30 absolute -top-20 left-12' />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
               Luxury Experiences
             </span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover why thousands of customers trust us for their most precious gifting moments
           </p>
         </div>
@@ -425,7 +425,7 @@ const TestimonialComponent = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16">
             {getVisibleTestimonials().map((testimonial, index) => (
-              <div
+              <div  data-aos="zoom-in-up"
                 key={`${testimonial.id}-${currentIndex}`}
                 className={`transform transition-all duration-500 ease-in-out ${isAnimating ? 'scale-95 opacity-70' : 'scale-100 opacity-100'
                   }`}
@@ -485,7 +485,7 @@ const TestimonialComponent = () => {
         </div>
 
        
-        <div className="mt-10">
+        <div data-aos="zoom-in-up" className="mt-10">
           <button className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400  border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
             {/* Morphing Background Layers */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>

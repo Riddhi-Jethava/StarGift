@@ -85,7 +85,7 @@ const CategoryShowcase = () => {
                     <div className={`relative p-3 sm:p-4 rounded-full transition-all duration-300 transform group-hover:scale-110 ${
                       hoveredCategory === category.id 
                         ? 'bg-gradient-to-br from-[#ED3237] to-[#133FAD] text-white shadow-lg' 
-                        : 'bg-gray-100 text-gray-600 group-hover:bg-gradient-to-br group-hover:from-[#ED3237]/10 group-hover:to-[#133FAD]/10'
+                        : 'bg-gradient-to-br from-[#ED3237] to-[#133FAD] text-white group-hover:bg-gradient-to-br group-hover:from-[#ED3237]/10 group-hover:to-[#133FAD]/10'
                     }`}>
                       {category.icon}
                     </div>
