@@ -428,7 +428,7 @@ const Footer = () => {
 
   return (
     <footer ref={sectionRef} className="relative bg-[#221F20] overflow-hidden">
-      <img src={box} alt="" className='absolute w-50 bottom-0 right-0 z-30 opacity-80'/>
+      <img src={box} alt="" className='absolute w-50 bottom-0 right-0 z-30 opacity-80' />
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 z-0">
         <img
@@ -525,7 +525,12 @@ const Footer = () => {
                     <div>
                       <h4 className="text-white font-semibold text-sm mb-1">Address</h4>
                       <p className="text-gray-400 text-sm leading-relaxed">
-                        123 Gift Lane, Elegance City, 12345
+                        Somnath Ind., area-5,
+                        Shiv Chowk Street,
+                        Nr. Sarvoday Fastner,
+                        opp. Krishna Park Hotel,
+                        Gondal Road, Rajkot-360022.
+                        Gujarat, India.
                       </p>
                     </div>
                   </div>
@@ -538,7 +543,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold text-sm mb-1">Phone</h4>
-                      <p className="text-gray-400 text-sm">+1 (555) 789-0123</p>
+                      <p className="text-gray-400 text-sm">+91 96387 88466</p>
                     </div>
                   </div>
                 </div>
@@ -550,7 +555,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold text-sm mb-1">Email</h4>
-                      <p className="text-gray-400 text-sm">support@luxurygifts.com</p>
+                      <p className="text-gray-400 text-sm">7stargifts@gmail.com</p>
                     </div>
                   </div>
                 </div>
