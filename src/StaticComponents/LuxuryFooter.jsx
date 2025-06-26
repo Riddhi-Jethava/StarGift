@@ -292,8 +292,8 @@ const Footer = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <span>© 2025 LuxuryGifts. All rights reserved.</span>
-              <span>Designed by <span className="text-[#ED3237]">GiftSpark Studio</span></span>
+              <span>© 2025 7 STAR GIFTS. All rights reserved.</span>
+              <span>Designed by <span className="text-[#ED3237]">Rudra Branding</span></span>
             </div>
           </div>
         </div>
