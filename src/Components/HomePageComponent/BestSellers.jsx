@@ -288,12 +288,12 @@ import {
     Award,
     ThumbsUp
 } from 'lucide-react';
-import s1 from '../../assets/HomeImg/gift (1).jpg'
-import s2 from '../../assets/HomeImg/gift (2).jpg'
-import s3 from '../../assets/HomeImg/gift (3).jpg'
-import cat1 from '../../assets/HomeImg/cat (3).jpg'
-import cat2 from '../../assets/HomeImg/cat (2).jpg'
-import cat3 from '../../assets/HomeImg/cat (4).jpg'
+import s1 from '../../assets/HomeImage/keychain.jpg'
+import s2 from '../../assets/HomeImage/giftset.jpg'
+import s3 from '../../assets/HomeImage/teacoaster.jpg'
+import cat1 from '../../assets/HomeImage/paper.jpg'
+import cat2 from '../../assets/HomeImage/pen.jpg'
+import cat3 from '../../assets/HomeImage/cardholder.jpg'
 import taddy from '../../assets/StaticImg/taddy.png'
 import box from '../../assets/StaticImg/pinkBox.png'
 
@@ -310,7 +310,7 @@ const BestSellers = () => {
     const bestSellers = [
         {
             id: 1,
-            name: "Premium Diamond Necklace",
+            name: "Premium Key Chain",
             price: 2499,
             originalPrice: 3199,
             image: s1,
@@ -322,7 +322,7 @@ const BestSellers = () => {
         },
         {
             id: 2,
-            name: "Luxury Watch Collection",
+            name: "Gift Set Collection",
             price: 1899,
             originalPrice: 2299,
             image: s2,
@@ -334,7 +334,7 @@ const BestSellers = () => {
         },
         {
             id: 3,
-            name: "Elegant Pearl Earrings",
+            name: "Tea Coaster",
             price: 899,
             originalPrice: 1199,
             image: s3,
@@ -346,7 +346,7 @@ const BestSellers = () => {
         },
         {
             id: 4,
-            name: "Royal Sapphire Ring",
+            name: "Paper Weight",
             price: 3299,
             originalPrice: 3999,
             image: cat1,
@@ -358,7 +358,7 @@ const BestSellers = () => {
         },
         {
             id: 5,
-            name: "Designer Bracelet Set",
+            name: "Pen Stand",
             price: 1299,
             originalPrice: 1699,
             image: cat2,
@@ -370,7 +370,7 @@ const BestSellers = () => {
         },
         {
             id: 6,
-            name: "Vintage Gold Pendant",
+            name: "Card Holder",
             price: 1799,
             originalPrice: 2199,
             image: cat3,
@@ -556,7 +556,7 @@ const BestSellers = () => {
                                 </button> */}
 
                                 {/* Product Image */}
-                                <div className="relative h-74 overflow-hidden rounded-t-3xl">
+                                <div className="relative h-90 overflow-hidden rounded-t-3xl">
                                     <img
                                         src={product.image}
                                         alt={product.name}
@@ -612,7 +612,7 @@ const BestSellers = () => {
                                         {/* Add to Cart Button */}
                                         <button className="w-full py-3 bg-gradient-to-r from-[#133FAD] to-[#ED3237] text-white font-semibold rounded-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 group">
                                             <ShoppingBag className="w-5 h-5 group-hover:animate-bounce" />
-                                            <span>Add to Cart</span>
+                                            <span>Explore More</span>
                                         </button>
                                     </div>
                                 </div>

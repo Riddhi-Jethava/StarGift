@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Heart, ShoppingBag, Play, Sparkles, Award } from 'lucide-react';
 import fixedBgImage from '../../assets/HomeImg/sliderbg.jpg'
-import s1 from '../../assets/HomeImg/gift (1).jpg'
-import s2 from '../../assets/HomeImg/gift (2).jpg'
-import s3 from '../../assets/HomeImg/gift (3).jpg'
+import s1 from '../../assets/HomeImage/TableClock.jpg'
+import s2 from '../../assets/HomeImage/trophy.jpg'
+import s3 from '../../assets/HomeImage/tableTop.jpg'
 import taddy from '../../assets/HomeImg/panda.png'
 
 const HeroSlider = () => {
@@ -15,8 +15,8 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      productImage: s2,
-      title: "Premium Gift Collection",
+      productImage: s1,
+      title: "Table Clock Collection",
       subtitle: "Luxury Redefined",
       description: "Discover our exclusive range of handcrafted gifts that speak the language of elegance and sophistication.",
       price: "$299",
@@ -27,8 +27,8 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      productImage: s1,
-      title: "Wedding Collection",
+      productImage: s2,
+      title: "Trophy Collection",
       subtitle: "Moments to Treasure",
       description: "Celebrate love with our curated wedding gift collection designed to make every moment unforgettable.",
       price: "$199",
@@ -40,7 +40,7 @@ const HeroSlider = () => {
     {
       id: 3,
       productImage: s3,
-      title: "Corporate Gifts",
+      title: "Table Top Gifts",
       subtitle: "Professional Excellence",
       description: "Impress your clients and colleagues with our sophisticated corporate gift solutions.",
       price: "$149",

@@ -271,10 +271,10 @@
 import React, { useState, useEffect } from 'react';
 import { Gift, Heart, Users, Briefcase, Star, Sparkles, ArrowRight, Crown, Gem, Trophy } from 'lucide-react';
 // import bgImg from '../../assets/HomeImg/bg1.jpg'
-import cat1 from '../../assets/HomeImg/cat (3).jpg'
-import cat2 from '../../assets/HomeImg/cat (2).jpg'
-import cat3 from '../../assets/HomeImg/cat (4).jpg'
-import cat4 from '../../assets/HomeImg/cat (1).jpg'
+import cat1 from '../../assets/HomeImage/trophy.jpg'
+import cat2 from '../../assets/HomeImage/TableClock.jpg'
+import cat3 from '../../assets/HomeImage/tableTop.jpg'
+import cat4 from '../../assets/HomeImage/calender.jpg'
 import taddy from '../../assets/StaticImg/taddy.png'
 import rabbit from '../../assets/StaticImg/rabit.png'
 
@@ -293,7 +293,7 @@ const PopularGiftCategories = () => {
   const categories = [
     {
       id: 1,
-      title: "Birthday Gifts",
+      title: "Trophy Collection",
       subtitle: "Celebrate Life",
       description: "Make every birthday unforgettable with our curated collection of premium gifts",
       icon: Gift,
@@ -306,7 +306,7 @@ const PopularGiftCategories = () => {
     },
     {
       id: 2,
-      title: "Anniversary",
+      title: "Table Clock",
       subtitle: "Love Stories",
       description: "Commemorate precious moments with elegant gifts that speak the language of love",
       icon: Heart,
@@ -319,7 +319,7 @@ const PopularGiftCategories = () => {
     },
     {
       id: 3,
-      title: "Personalized",
+      title: "Table Top",
       subtitle: "Uniquely Yours",
       description: "Custom crafted gifts that tell your story with personal touches and memories",
       icon: Star,
@@ -332,7 +332,7 @@ const PopularGiftCategories = () => {
     },
     {
       id: 4,
-      title: "Corporate",
+      title: "Calender",
       subtitle: "Professional Excellence",
       description: "Sophisticated corporate gifts that leave lasting impressions and build relationships",
       icon: Briefcase,
