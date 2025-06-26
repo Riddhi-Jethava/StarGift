@@ -12,7 +12,7 @@ const LeafFall = () => {
   }));
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[9999]">
+    <div className="hidden md:block fixed top-0 left-0 w-full h-full pointer-events-none z-[9999]">
       {leaves.map((leaf) => (
         <img
           key={leaf.id}

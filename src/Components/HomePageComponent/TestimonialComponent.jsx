@@ -363,7 +363,7 @@ const TestimonialComponent = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
-      <img src={box} alt="" className='w-50 absolute -bottom-17 -left-3 z-20'/>
+      <img src={box} alt="" className='w-26 md:w-50 absolute -bottom-12 md:-bottom-17 -left-3 z-20'/>
       <div className="absolute inset-0 overflow-hidden">
         <div className="floating-gift absolute top-20 left-10 text-[#ED3237]/20 animate-bounce">
           <Gift size={40} />
@@ -423,9 +423,9 @@ const TestimonialComponent = () => {
             <ChevronRight className="text-[#133FAD] group-hover:scale-110 transition-transform" size={24} />
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16">
+          <div data-aos="zoom-in-up" className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16">
             {getVisibleTestimonials().map((testimonial, index) => (
-              <div  data-aos="zoom-in-up"
+              <div  
                 key={`${testimonial.id}-${currentIndex}`}
                 className={`transform transition-all duration-500 ease-in-out ${isAnimating ? 'scale-95 opacity-70' : 'scale-100 opacity-100'
                   }`}
