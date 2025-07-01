@@ -253,8 +253,8 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Gift, Heart, Sparkles } from 'lucide-react';
 import { User } from 'lucide-react';
-import taddy from '../../assets/StaticImg/taddy.png'
-import box from '../../assets/StaticImg/taddybox.png'
+// import taddy from '../../assets/StaticImg/taddy.png'
+// import box from '../../assets/StaticImg/taddybox.png'
 
 const TestimonialComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -363,7 +363,7 @@ const TestimonialComponent = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
-      <img src={box} alt="" className='w-26 md:w-50 absolute -bottom-12 md:-bottom-17 -left-3 z-20'/>
+      {/* <img src={box} alt="" className='w-26 md:w-50 absolute -bottom-12 md:-bottom-17 -left-3 z-20'/> */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="floating-gift absolute top-20 left-10 text-[#ED3237]/20 animate-bounce">
           <Gift size={40} />
@@ -392,7 +392,7 @@ const TestimonialComponent = () => {
           <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
             <Sparkles className="w-5 h-5 text-[#6787d7]" />
             <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">Customer Stories</span>
-             <img src={taddy} alt="" className='w-30 absolute -top-20 left-12' />
+             {/* <img src={taddy} alt="" className='w-30 absolute -top-20 left-12' /> */}
           </div>
 
           <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">

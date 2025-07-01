@@ -13,8 +13,8 @@ import {
     CheckCircle,
 } from 'lucide-react';
 import textImg from '../../assets/HomeImg/gift (1).jpg'
-import ribbon from '../../assets/HomeImg/ribbon.png'
-import taddy from '../../assets/StaticImg/taddy.png'
+// import ribbon from '../../assets/HomeImg/ribbon.png'
+// import taddy from '../../assets/StaticImg/taddy.png'
 
 const WhyChooseUs = () => {
     const [visibleItems, setVisibleItems] = useState([]);
@@ -175,7 +175,7 @@ const WhyChooseUs = () => {
                                 />
                             ))}
                         </div>
-                         <img src={taddy} alt="" className='w-30 absolute -top-20 left-25' />
+                         {/* <img src={taddy} alt="" className='w-30 absolute -top-20 left-25' /> */}
                     </div>
 
                     {/* Main Title with Image Clipped to Text */}
@@ -244,9 +244,9 @@ const WhyChooseUs = () => {
                                         }`}
                                     style={{ animationDelay: `${index * 0.2}s` }}
                                 >
-                                    <div>
+                                    {/* <div>
                                         <img src={ribbon} alt="" className='w-25 absolute -top-[13.5%] -right-[8%] rotate-22 z-50' />
-                                    </div>
+                                    </div> */}
                                     {/* Card Background Effects */}
                                     <div
                                         className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-all duration-500 blur-lg`}

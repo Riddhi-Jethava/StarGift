@@ -275,8 +275,8 @@ import cat1 from '../../assets/HomeImage/trophy.jpg'
 import cat2 from '../../assets/HomeImage/TableClock.jpg'
 import cat3 from '../../assets/HomeImage/tableTop.jpg'
 import cat4 from '../../assets/HomeImage/calender.jpg'
-import taddy from '../../assets/StaticImg/taddy.png'
-import rabbit from '../../assets/StaticImg/rabit.png'
+// import taddy from '../../assets/StaticImg/taddy.png'
+// import rabbit from '../../assets/StaticImg/rabit.png'
 
 const PopularGiftCategories = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -347,7 +347,7 @@ const PopularGiftCategories = () => {
 
   return (
     <div className="relative py-20 px-0 md:px-10 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
-      <img src={rabbit} className='w-35 md:w-60 absolute -bottom-10 md:-bottom-18 -left-3 z-20'/>
+      {/* <img src={rabbit} className='w-35 md:w-60 absolute -bottom-10 md:-bottom-18 -left-3 z-20'/> */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="floating-gift absolute top-20 left-10 text-[#ED3237]/20 animate-bounce">
           <Gift size={40} />
@@ -429,7 +429,7 @@ const PopularGiftCategories = () => {
           <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
             <Crown className="w-5 h-5 text-[#6787d7]" />
             <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">Premium Collection</span>
-            <img src={taddy} alt="" className='w-30 absolute -top-20 left-15' />
+            {/* <img src={taddy} alt="" className='w-30 absolute -top-20 left-15' /> */}
           </div>
 
           <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">

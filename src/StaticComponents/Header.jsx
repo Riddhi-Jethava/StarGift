@@ -57,7 +57,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
       ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-black/10'
-      : 'bg-transparent backdrop-blur-sm'
+      : 'bg-white/50 backdrop-blur-3xl'
       }`}>
       {/* Decorative top border */}
       <div className="h-1 bg-gradient-to-r from-[#ED3237] via-[#133FAD] to-[#ED3237] opacity-80"></div>
@@ -78,10 +78,10 @@ const Header = () => {
               <div key={index} className="relative group">
                 <a
                   href={item.href}
-                  className={`flex items-center space-x-1 font-medium text-md tracking-wide hover:text-[#ED3237] transition-all duration-300 py-2 px-3 xl:px-4 rounded-full hover:bg-gradient-to-r hover:from-[#ED3237]/10 hover:to-[#133FAD]/10 hover:shadow-md hover:scale-105 ${
+                  className={`flex items-center space-x-1 font-medium text-lg tracking-wide hover:text-[#aba3a3] transition-all duration-300 py-2 px-3 xl:px-4 rounded-full hover:bg-gradient-to-r hover:from-[#ED3237]/10 hover:to-[#133FAD]/10 hover:shadow-md hover:scale-105 ${
                   scrolled
                     ? 'text-gray-800'
-                    : 'text-gray-300'
+                    : 'text-gray-900'
                 }`}
                 onMouseEnter={() => item.hasDropdown && setIsDropdownOpen(true)}
                 onMouseLeave={() => item.hasDropdown && setIsDropdownOpen(false)}

@@ -294,8 +294,8 @@ import s3 from '../../assets/HomeImage/teacoaster.jpg'
 import cat1 from '../../assets/HomeImage/paper.jpg'
 import cat2 from '../../assets/HomeImage/pen.jpg'
 import cat3 from '../../assets/HomeImage/cardholder.jpg'
-import taddy from '../../assets/StaticImg/taddy.png'
-import box from '../../assets/StaticImg/pinkBox.png'
+// import taddy from '../../assets/StaticImg/taddy.png'
+// import box from '../../assets/StaticImg/pinkBox.png'
 
 
 const BestSellers = () => {
@@ -451,7 +451,7 @@ const BestSellers = () => {
             className="relative py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
             ref={sectionRef}
         >
-            <img src={box} alt="" className='absolute w-40 md:w-65 -bottom-5 right-0 opacity-80 z-20'/>
+            {/* <img src={box} alt="" className='absolute w-40 md:w-65 -bottom-5 right-0 opacity-80 z-20'/> */}
             {/* Background Effects */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Animated Gradient Orbs */}
@@ -492,7 +492,7 @@ const BestSellers = () => {
                         <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">People Loved These</span>
                         <Users className="w-5 h-5 text-[#133FAD]" />
                         <ThumbsUp className="w-4 h-4 text-[#ED3237]" />
-                         <img src={taddy} alt="" className='w-30 absolute -top-20 left-19' />
+                         {/* <img src={taddy} alt="" className='w-30 absolute -top-20 left-19' /> */}
                     </div>
 
                     <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
