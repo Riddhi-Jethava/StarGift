@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, Gift, Heart, Gem, Trophy } from 'lucide-react';
 import box from '../../assets/HomeImg/box.png'
-import img1 from '../../assets/HomeImage/trophy.jpg'
-import img2 from '../../assets/HomeImage/mobileStand.jpg'
+import img1 from '../../assets/ProductsImg/shield.jpg'
+import img2 from '../../assets/ProductsImg/mobile stand.jpg'
 
 const AboutUs = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

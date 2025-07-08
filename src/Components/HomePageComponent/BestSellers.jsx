@@ -1,277 +1,3 @@
-// import React, { useState, useEffect, useRef } from 'react';
-// import { Star, Sparkles, Heart, ShoppingBag, Crown } from 'lucide-react';
-
-// const BestSellers = () => {
-//   const [isVisible, setIsVisible] = useState(false);
-//   const sectionRef = useRef(null);
-//   const scrollContainerRef = useRef(null);
-//   const [isDragging, setIsDragging] = useState(false);
-//   const [startX, setStartX] = useState(0);
-//   const [scrollLeft, setScrollLeft] = useState(0);
-
-//   // Sample product data (replace images with your assets)
-//   const products = [
-//     {
-//       id: 1,
-//       name: 'Luxury Gift Box',
-//       price: 149.99,
-//       rating: 4.8,
-//       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-//     },
-//     {
-//       id: 2,
-//       name: 'Elegant Necklace',
-//       price: 89.99,
-//       rating: 4.9,
-//       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-//     },
-//     {
-//       id: 3,
-//       name: 'Premium Watch',
-//       price: 299.99,
-//       rating: 4.7,
-//       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-//     },
-//     {
-//       id: 4,
-//       name: 'Scented Candle Set',
-//       price: 49.99,
-//       rating: 4.6,
-//       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-//     },
-//     {
-//       id: 5,
-//       name: 'Personalized Journal',
-//       price: 34.99,
-//       rating: 4.8,
-//       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-//     },
-//   ];
-
-//   // Intersection Observer for visibility
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         if (entries[0].isIntersecting) {
-//           setIsVisible(true);
-//         }
-//       },
-//       { threshold: 0.1 }
-//     );
-
-//     if (sectionRef.current) {
-//       observer.observe(sectionRef.current);
-//     }
-
-//     return () => observer.disconnect();
-//   }, []);
-
-//   // Drag-to-scroll functionality
-//   const handleMouseDown = (e) => {
-//     setIsDragging(true);
-//     setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-//     setScrollLeft(scrollContainerRef.current.scrollLeft);
-//     scrollContainerRef.current.style.cursor = 'grabbing';
-//   };
-
-//   const handleMouseLeave = () => {
-//     setIsDragging(false);
-//     scrollContainerRef.current.style.cursor = 'grab';
-//   };
-
-//   const handleMouseUp = () => {
-//     setIsDragging(false);
-//     scrollContainerRef.current.style.cursor = 'grab';
-//   };
-
-//   const handleMouseMove = (e) => {
-//     if (!isDragging) return;
-//     e.preventDefault();
-//     const x = e.pageX - scrollContainerRef.current.offsetLeft;
-//     const walk = (x - startX) * 2; // Scroll speed
-//     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-//   };
-
-//   return (
-//     <div
-//       className="relative py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden"
-//       ref={sectionRef}
-//     >
-//       {/* Background Decorative Elements */}
-//       <div className="absolute inset-0 pointer-events-none">
-//         <div
-//           className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-[#133FAD]/10 to-[#ED3237]/10 rounded-full blur-3xl animate-pulse opacity-30"
-//           style={{ animationDuration: '6s' }}
-//         ></div>
-//         <div
-//           className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#ED3237]/10 to-[#133FAD]/10 rounded-full blur-3xl animate-pulse opacity-30"
-//           style={{ animationDelay: '2s', animationDuration: '8s' }}
-//         ></div>
-//         <div
-//           className="absolute top-1/2 left-1/3 w-48 h-48 bg-gradient-to-br from-[#221F20]/5 to-[#ED3237]/5 rounded-full blur-2xl animate-pulse opacity-20"
-//           style={{ animationDelay: '4s', animationDuration: '10s' }}
-//         ></div>
-//       </div>
-
-//       <div className="container mx-auto relative z-10">
-//         {/* Header Section */}
-//         <div className="text-center mb-16">
-//           <div
-//             className={`inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 via-[#ED3237]/10 to-[#133FAD]/10 backdrop-blur-xl rounded-full border border-[#221F20]/10 shadow-lg mb-6 transition-all duration-1000 ${
-//               isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-//             }`}
-//           >
-//             <Crown className="w-5 h-5 text-[#ED3237]" />
-//             <span className="text-sm font-semibold text-[#133FAD] tracking-wider uppercase">
-//               Best Sellers
-//             </span>
-//             <Sparkles className="w-4 h-4 text-[#ED3237] animate-pulse" />
-//           </div>
-
-//           <h2
-//             className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 transition-all duration-1000 delay-200 ${
-//               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-//             }`}
-//           >
-//             <span className="bg-gradient-to-r from-[#221F20] via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
-//               People Loved These
-//             </span>
-//           </h2>
-
-//           <p
-//             className={`text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
-//               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-//             }`}
-//           >
-//             Explore our most cherished gifts, handpicked by our community for their elegance and charm.
-//           </p>
-//         </div>
-
-//         {/* Horizontal Scrollable Product Cards */}
-//         <div
-//           className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-hidden"
-//           ref={scrollContainerRef}
-//           onMouseDown={handleMouseDown}
-//           onMouseLeave={handleMouseLeave}
-//           onMouseUp={handleMouseUp}
-//           onMouseMove={handleMouseMove}
-//           style={{ cursor: 'grab' }}
-//         >
-//           {products.map((product, index) => (
-//             <div
-//               key={product.id}
-//               className={`group relative flex-shrink-0 w-80 md:w-full snap-start transition-all duration-500 ${
-//                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-//               }`}
-//               style={{ animationDelay: `${index * 0.2}s` }}
-//             >
-//               {/* Card Container */}
-//               <div className="relative h-[450px] bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden">
-//                 {/* Animated Border */}
-//                 <div
-//                   className="absolute -inset-1 bg-gradient-to-br from-[#133FAD] via-[#ED3237] to-[#221F20] rounded-2xl blur-sm opacity-0 group-hover:opacity-75 transition-opacity duration-500"
-//                 ></div>
-//                 <div
-//                   className="absolute -inset-0.5 bg-gradient-to-br from-[#133FAD] via-[#ED3237] to-[#221F20] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-//                 ></div>
-
-//                 {/* Card Content */}
-//                 <div className="relative h-full flex flex-col">
-//                   {/* Product Image */}
-//                   <div className="relative h-2/3 overflow-hidden">
-//                     <img
-//                       src={product.image}
-//                       alt={product.name}
-//                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-//                     />
-//                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
-//                     {/* Heart Icon */}
-//                     <div className="absolute top-4 right-4 p-2 bg-[#133FAD]/20 rounded-full border border-white/20 group-hover:scale-110 transition-transform duration-300">
-//                       <Heart className="w-5 h-5 text-[#ED3237] group-hover:fill-[#ED3237] transition-all duration-300" />
-//                     </div>
-//                   </div>
-
-//                   {/* Product Details */}
-//                   <div className="p-6 flex-1 flex flex-col justify-between">
-//                     <div>
-//                       <h3 className="text-xl font-bold text-[#221F20] group-hover:text-[#133FAD] transition-colors duration-300">
-//                         {product.name}
-//                       </h3>
-//                       <div className="flex items-center mt-2">
-//                         {[...Array(5)].map((_, i) => (
-//                           <Star
-//                             key={i}
-//                             className={`w-4 h-4 ${
-//                               i < Math.floor(product.rating) ? 'text-[#ED3237] fill-current' : 'text-gray-300'
-//                             }`}
-//                           />
-//                         ))}
-//                         <span className="ml-2 text-sm text-gray-500">({product.rating})</span>
-//                       </div>
-//                     </div>
-//                     <div className="flex items-center justify-between mt-4">
-//                       <span className="text-lg font-semibold text-[#ED3237]">${product.price.toFixed(2)}</span>
-//                       <button className="relative px-4 py-2 bg-gradient-to-r from-[#133FAD] to-[#ED3237] text-white rounded-full text-sm font-semibold overflow-hidden group/btn">
-//                         <div className="absolute inset-0 bg-gradient-to-r from-[#ED3237] to-[#133FAD] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></div>
-//                         <div className="relative flex items-center space-x-2 z-10">
-//                           <ShoppingBag className="w-4 h-4" />
-//                           <span>Add to Cart</span>
-//                         </div>
-//                       </button>
-//                     </div>
-//                   </div>
-
-//                   {/* Sparkle Effects */}
-//                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-//                     <div
-//                       className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-ping"
-//                       style={{ animationDelay: '0.1s' }}
-//                     ></div>
-//                     <div
-//                       className="absolute bottom-1/4 right-1/4 w-1 h-1 bg-white rounded-full animate-ping"
-//                       style={{ animationDelay: '0.3s' }}
-//                     ></div>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* Floating Shadow */}
-//               <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-gradient-to-r from-transparent via-black/10 to-transparent rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* Floating Decorative Elements */}
-//         <div
-//           className="absolute top-1/5 right-1/5 animate-bounce"
-//           style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}
-//         >
-//           <Sparkles className="w-6 h-6 text-[#ED3237] opacity-70" />
-//         </div>
-//         <div
-//           className="absolute bottom-1/5 left-1/5 animate-bounce"
-//           style={{ animationDuration: '4s', animationDelay: '1s' }}
-//         >
-//           <Star className="w-5 h-5 text-[#133FAD] opacity-70" />
-//         </div>
-//       </div>
-
-//       <style jsx>{`
-//         /* Hide scrollbar for horizontal scroll */
-//         .scrollbar-hide::-webkit-scrollbar {
-//           display: none;
-//         }
-//         .scrollbar-hide {
-//           -ms-overflow-style: none;
-//           scrollbar-width: none;
-//         }
-//       `}</style>
-//     </div>
-//   );
-// };
-
-// export default BestSellers;
-
 import React, { useState, useEffect, useRef } from 'react';
 import {
     Heart,
@@ -288,12 +14,12 @@ import {
     Award,
     ThumbsUp
 } from 'lucide-react';
-import s1 from '../../assets/HomeImage/keychain.jpg'
-import s2 from '../../assets/HomeImage/giftset.jpg'
-import s3 from '../../assets/HomeImage/teacoaster.jpg'
-import cat1 from '../../assets/HomeImage/paper.jpg'
-import cat2 from '../../assets/HomeImage/pen.jpg'
-import cat3 from '../../assets/HomeImage/cardholder.jpg'
+import s1 from '../../assets/ProductsImg/key chain.jpg'
+import s2 from '../../assets/ProductsImg/corporate.jpg'
+import s3 from '../../assets/ProductsImg/teacoaster.jpg'
+import cat1 from '../../assets/ProductsImg/paperholder.jpg'
+import cat2 from '../../assets/ProductsImg/pen stand.png'
+import cat3 from '../../assets/ProductsImg/wallet.jpg'
 // import taddy from '../../assets/StaticImg/taddy.png'
 // import box from '../../assets/StaticImg/pinkBox.png'
 
@@ -531,7 +257,7 @@ const BestSellers = () => {
                         {bestSellers.map((product, index) => (
                             <div data-aos="zoom-in-up"
                                 key={product.id}
-                                className={`group relative flex-shrink-0 w-80 bg-white/20 backdrop-blur-3xl rounded-3xl border border-[#221F20]/10 hover:border-[#133FAD]/30 shadow-md hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                                className={`group relative flex-shrink-0 w-100 bg-white/20 backdrop-blur-sm rounded-3xl border border-[#221F20]/10 hover:border-[#133FAD]/30 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                                     }`}
                                 style={{ animationDelay: `${index * 0.1}s` }}
                                 onMouseEnter={() => setHoveredCard(product.id)}
@@ -556,16 +282,16 @@ const BestSellers = () => {
                                 </button> */}
 
                                 {/* Product Image */}
-                                <div className="relative h-90 overflow-hidden rounded-t-3xl">
+                                <div className="relative h-100 overflow-hidden rounded-t-3xl">
                                     <img
                                         src={product.image}
                                         alt={product.name}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        className="bg-gray w-auto object-contain group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                                     {/* Quick View Button */}
-                                    <button className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/90 backdrop-blur-lg text-[#221F20] text-sm font-semibold rounded-full shadow-lg border border-[#221F20]/10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#133FAD] hover:text-white">
+                                    <button className="absolute bottom-4 left-1/2 -translate-x-1/2 px-8 py-3 cursor-pointer bg-white/90 backdrop-blur-lg text-[#221F20] text-sm font-semibold rounded-full shadow-lg border border-[#221F20]/10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#133FAD] hover:text-white">
                                         <Eye className="w-4 h-4 inline mr-2" />
                                         Quick View
                                     </button>

@@ -271,10 +271,10 @@
 import React, { useState, useEffect } from 'react';
 import { Gift, Heart, Users, Briefcase, Star, Sparkles, ArrowRight, Crown, Gem, Trophy } from 'lucide-react';
 // import bgImg from '../../assets/HomeImg/bg1.jpg'
-import cat1 from '../../assets/HomeImage/trophy.jpg'
-import cat2 from '../../assets/HomeImage/TableClock.jpg'
-import cat3 from '../../assets/HomeImage/tableTop.jpg'
-import cat4 from '../../assets/HomeImage/calender.jpg'
+import cat1 from '../../assets/ProductsImg/shield.jpg'
+import cat2 from '../../assets/ProductsImg/clock.jpg'
+import cat3 from '../../assets/ProductsImg/tabletop.jpg'
+import cat4 from '../../assets/ProductsImg/calender.png'
 // import taddy from '../../assets/StaticImg/taddy.png'
 // import rabbit from '../../assets/StaticImg/rabit.png'
 
