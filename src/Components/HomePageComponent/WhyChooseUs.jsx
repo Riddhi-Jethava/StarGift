@@ -180,7 +180,7 @@ const WhyChooseUs = () => {
 
                     {/* Main Title with Image Clipped to Text */}
                     <h2  data-aos="zoom-in-up"
-                        className={`text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-tight mb-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                        className={`text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                             }`}
                     >
                         <span className="block uppercase relative">
@@ -224,6 +224,7 @@ const WhyChooseUs = () => {
                             <div className="absolute -inset-4 bg-gradient-to-br from-[#133FAD]/5 to-[#ED3237]/5 blur-xl rounded-lg animate-pulse"></div>
                         </span>
                     </h2>
+                        <p className='text-2xl font-semibold mb-8 italic font-serif'>Honour For The Best</p>
 
                     {/* Subtitle */}
                     <p  data-aos="zoom-in-up"

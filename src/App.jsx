@@ -7,6 +7,11 @@ import Header from './StaticComponents/Header';
 import LuxuryFooter from './StaticComponents/LuxuryFooter';
 import LeafFall from './StaticComponents/LeafFall';
 import WhatsApp3DButton from './StaticComponents/WhatsApp3DButton';
+import AboutPage from './Pages/AboutPage';
+import GalleryPage from './Pages/GalleryPage';
+import EBrochurePage from './Pages/EBrochurePage';
+import ContactPage from './Pages/ContactPage';
+import ProductsPage from './Pages/ProductsPage';
 
 const App = () => {
 
@@ -21,9 +26,14 @@ const App = () => {
     <div>
       <Header />
       <WhatsApp3DButton />
-      <LeafFall />
+      {/* <LeafFall /> */}
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/products' element={<ProductsPage />} />
+        <Route path='/gallery' element={<GalleryPage />} />
+        <Route path='/brochure' element={<EBrochurePage />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
       <LuxuryFooter />
     </div>

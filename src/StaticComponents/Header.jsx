@@ -30,28 +30,23 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#', icon: <Home className="w-5 h-5" /> },
-    { name: 'About', href: '#', icon: <User className="w-5 h-5" /> },
+    { name: 'About', href: '/about', icon: <User className="w-5 h-5" /> },
     {
       name: 'Product',
-      href: '#',
+      href: '/products',
       icon: <Package className="w-5 h-5" />,
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Trophy', icon: <Gift className="w-4 h-4" />, href: '#' },
-        { name: 'Calender', icon: <Heart className="w-4 h-4" />, href: '#' },
-        { name: 'Table Clock', icon: <Crown className="w-4 h-4" />, href: '#' },
-        { name: 'Table Top', icon: <Star className="w-4 h-4" />, href: '#' }
+        { name: 'Metal Trophy', icon: <Gift className="w-4 h-4" />, href: '#' },
+        { name: 'Table Top', icon: <Heart className="w-4 h-4" />, href: '#' },
+        { name: 'memento', icon: <Crown className="w-4 h-4" />, href: '#' },
+        { name: 'Metal Key-Chain', icon: <Star className="w-4 h-4" />, href: '#' },
+        { name: 'Medals', icon: <Star className="w-4 h-4" />, href: '#' }
       ]
     },
-    { name: 'Gallery', href: '#', icon: <Image className="w-5 h-5" /> },
-    { name: 'Contact', href: '#', icon: <Phone className="w-5 h-5" /> }
-  ];
-
-  const languages = [
-    { code: 'EN', name: 'English', flag: '🇺🇸' },
-    { code: 'FR', name: 'Français', flag: '🇫🇷' },
-    { code: 'ES', name: 'Español', flag: '🇪🇸' },
-    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' }
+    { name: 'Gallery', href: '/gallery', icon: <Image className="w-5 h-5" /> },
+    { name: 'E-Brochure', href: '/brochure', icon: <Image className="w-5 h-5" /> },
+    { name: 'Contact', href: '/contact', icon: <Phone className="w-5 h-5" /> }
   ];
 
   return (

@@ -16,9 +16,9 @@ const HomePage = () => {
       <HeroSlider />
       <CategoryShowcase />
       <AboutUs />
+      <Banner />
       <PopularGiftCategories />
       <WhyChooseUs />
-      <Banner />
       <BestSellers />
       <Banner2 />
       <TestimonialComponent />
