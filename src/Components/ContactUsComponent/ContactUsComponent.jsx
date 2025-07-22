@@ -336,24 +336,19 @@ const ContactUsComponent = () => {
           {/* Map Container */}
           <div className="h-96 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
             {/* Placeholder for actual map */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4 animate-bounce" />
-                {/* <h3 className="text-xl font-semibold text-gray-600 mb-2">Interactive Map</h3>
-                <p className="text-gray-500">Integrate with Google Maps API</p> */}
-              </div>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d59070.204647707855!2d70.7723264!3d22.28224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1753181248028!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='w-full h-full'></iframe>
+            
             
             {/* Map overlay effects */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#ED3237]/5 via-transparent to-[#133FAD]/5"></div>
             
             {/* Animated location markers */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="relative">
                 <div className="w-4 h-4 bg-[#ED3237] rounded-full animate-ping"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#133FAD] rounded-full"></div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

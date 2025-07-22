@@ -560,34 +560,34 @@ const BestSellers = () => {
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-[#ED3237]/5 to-[#133FAD]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-l from-[#133FAD]/5 to-[#ED3237]/5 rounded-full blur-3xl"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16">
-                     <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
-                         <TrendingUp className="w-5 h-5 text-[#6787d7]" />
-                         <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">People Loved These</span>
-                         <Users className="w-5 h-5 text-[#133FAD]" />
-                         <ThumbsUp className="w-4 h-4 text-[#ED3237]" />
-                          {/* <img src={taddy} alt="" className='w-30 absolute -top-20 left-19' /> */}
-                     </div>
-                     <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                         <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
-                             Best Sellers
-                         </span>
-                     </h2>
-                     <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                         Discover our most coveted pieces, handpicked by thousands of satisfied customers who've made these treasures their favorites.
-                     </p>
-                 </div>
+          <div data-aos="zoom-in-up" className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
+            <TrendingUp className="w-5 h-5 text-[#6787d7]" />
+            <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">People Loved These</span>
+            <Users className="w-5 h-5 text-[#133FAD]" />
+            <ThumbsUp className="w-4 h-4 text-[#ED3237]" />
+            {/* <img src={taddy} alt="" className='w-30 absolute -top-20 left-19' /> */}
+          </div>
+          <h2 data-aos="zoom-in-up" className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
+              Best Sellers
+            </span>
+          </h2>
+          <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover our most coveted pieces, handpicked by thousands of satisfied customers who've made these treasures their favorites.
+          </p>
+        </div>
 
         {/* Luxury Slider Container */}
         <div className="relative overflow-hidden">
           {/* Inner glow effect */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 via-transparent to-gray-100/50 pointer-events-none"></div>
-          
+
           <div
             className="flex transition-transform duration-700 ease-out"
-            style={{ 
+            style={{
               transform: `translateX(-${currentSlide * (100 / slidesPerView)}%)`
             }}
             ref={sliderRef}
@@ -596,13 +596,13 @@ const BestSellers = () => {
             onTouchEnd={handleTouchEnd}
           >
             {bestSellers.map((item) => (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 className="flex-shrink-0 p-3 sm:p-4 lg:p-6"
                 style={{ width: `${100 / slidesPerView}%` }}
               >
                 <div className="relative group overflow-hidden rounded-2xl bg-white shadow-lg border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-500">
-                  
+
                   {/* Image Container */}
                   <div className="relative overflow-hidden rounded-xl m-3">
                     <img
@@ -610,10 +610,10 @@ const BestSellers = () => {
                       alt={item.name}
                       className="w-full h-40 sm:h-48 lg:h-56 xl:h-70 object-cover transition-all duration-500 group-hover:scale-105"
                     />
-                    
+
                     {/* Luxury Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                    
+
                     {/* View Details Icon - Shows on hover */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
                       <div className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-full p-3 sm:p-4 hover:bg-white transition-all duration-300 cursor-pointer shadow-lg">
@@ -621,14 +621,14 @@ const BestSellers = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Product Info */}
-                  <div className="p-3 sm:p-4">                  
+                  <div className="p-3 sm:p-4 text-center">
                     {/* Product Name */}
                     <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#ED3237] group-hover:to-[#133FAD] group-hover:bg-clip-text transition-all duration-300 leading-tight">
                       {item.name}
                     </h3>
-                    
+
                     {/* View Details Text */}
                     <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="text-[#ED3237] text-sm font-medium cursor-pointer hover:text-[#133FAD] transition-colors">
@@ -662,15 +662,14 @@ const BestSellers = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`transition-all duration-500 ${
-                currentSlide === index
+              className={`transition-all duration-500 ${currentSlide === index
                   ? 'w-8 h-3 bg-gradient-to-r from-[#ED3237] to-[#133FAD] rounded-full shadow-lg'
                   : 'w-3 h-3 bg-gray-300 hover:bg-gray-400 rounded-full'
-              }`}
+                }`}
             ></button>
           ))}
         </div>
-        
+
         {/* Luxury Bottom Decoration */}
         <div className="flex justify-center mt-8">
           <div className="flex items-center gap-4">
