@@ -414,6 +414,13 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Eye, TrendingUp, Users, ThumbsUp } from 'lucide-react';
+import main1 from '../../assets/ProductImg/Trophy.png'
+import sub1 from '../../assets/ProductImg/trophy.webp'
+import sub2 from '../../assets/ProductImg/trophy2.webp'
+import main2 from '../../assets/ProductImg/table1.webp'
+import sub3 from '../../assets/ProductImg/table2.webp'
+import main3 from '../../assets/ProductImg/giftset.webp'
+import main4 from '../../assets/ProductImg/keychain.png'
 
 const BestSellers = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -426,7 +433,7 @@ const BestSellers = () => {
     {
       id: 1,
       name: 'Crystal Trophy',
-      image: 'https://images.unsplash.com/photo-1622434641406-a158123450f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: main1,
       rating: 4.9
     },
     {
@@ -438,13 +445,13 @@ const BestSellers = () => {
     {
       id: 3,
       name: 'Engraved Memento',
-      image: 'https://images.unsplash.com/photo-1517508733680-5db265c8f803?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: main3,
       rating: 4.9
     },
     {
       id: 4,
       name: 'Metal Keychain',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: main4,
       rating: 4.7
     },
     {
@@ -601,7 +608,7 @@ const BestSellers = () => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-40 sm:h-48 lg:h-56 xl:h-64 object-cover transition-all duration-500 group-hover:scale-110"
+                      className="w-full h-40 sm:h-48 lg:h-56 xl:h-70 object-cover transition-all duration-500 group-hover:scale-105"
                     />
                     
                     {/* Luxury Overlay */}
@@ -637,13 +644,13 @@ const BestSellers = () => {
           {/* Luxury Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white p-2 sm:p-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 border border-gray-200"
+            className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white p-2 sm:p-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white p-2 sm:p-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 border border-gray-200"
+            className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white p-2 sm:p-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 cursor-pointer"
           >
             <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>

@@ -275,7 +275,7 @@ const PageHeader = ({
         </div>
 
         {/* Right Image Section with Arrow Shape */}
-        <div className="hidden md:flex-1 relative">
+        <div className="md:flex-1 relative">
           {/* Arrow Shape Overlay */}
           <div
             className="absolute inset-0 opacity-0 animate-slide-in-right"
