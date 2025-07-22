@@ -90,14 +90,14 @@
 //               <h3 className="text-3xl font-bold mb-4 text-transparent bg-gradient-to-r from-[#ED3237] to-[#133FAD] bg-clip-text">
 //                 7 Star Gifts Brochure
 //               </h3>
-//               <p className="text-gray-600 text-md leading-relaxed mb-6">
+//               <p className="text-gray-600 text-lg leading-relaxed mb-6">
 //                 Explore our world of exquisite metal craftsmanship with our brochure, showcasing creations that honor the best.
 //               </p>
 //               <ul className="space-y-3 mb-6">
 //                 {brochurePoints.map((point, index) => (
 //                   <li key={index} className="flex items-start space-x-3">
 //                     <Sparkles className="w-5 h-5 text-[#6787d7] mt-1" />
-//                     <span className="text-gray-600 text-sm">{point}</span>
+//                     <span className="text-gray-600 text-md">{point}</span>
 //                   </li>
 //                 ))}
 //               </ul>
@@ -277,7 +277,8 @@
 // export default BrochureComponent;
 
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Download, X, Send, Award, Star, Trophy, Crown } from 'lucide-react';
+import { Download, X, Send } from 'lucide-react';
+import cover from '../../assets/BrochureImg/cover.jpg'
 
 const BrochureComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -286,7 +287,6 @@ const BrochureComponent = () => {
   const [showToast, setShowToast] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredPoint, setHoveredPoint] = useState(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -317,30 +317,11 @@ const BrochureComponent = () => {
   };
 
   const brochurePoints = [
-    {
-      icon: Trophy,
-      title: "Premium Metal Awards",
-      description: "Showcases our premium metal awards and gifts",
-      gradient: "from-yellow-400 to-orange-500"
-    },
-    {
-      icon: Crown,
-      title: "Bespoke Designs",
-      description: "Highlights bespoke designs for every occasion",
-      gradient: "from-purple-400 to-pink-500"
-    },
-    {
-      icon: Award,
-      title: "Advanced Craftsmanship",
-      description: "Features advanced craftsmanship techniques",
-      gradient: "from-blue-400 to-cyan-500"
-    },
-    {
-      icon: Star,
-      title: "Elegant Achievements",
-      description: "Celebrates achievements with elegance",
-      gradient: "from-green-400 to-emerald-500"
-    }
+    "Premium metal awards and custom gifts",
+    "Bespoke designs tailored for your needs",
+    "Advanced craftsmanship and quality assurance",
+    "Recognition solutions for every occasion",
+    "Trusted by leading organizations worldwide",
   ];
 
   return (
@@ -361,16 +342,14 @@ const BrochureComponent = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
-        <div className={`text-center mb-16 transform transition-all duration-1000 ${
-          isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
-        }`}>
-          <div className="relative inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#133FAD]/10 to-[#ED3237]/10 rounded-full border border-[#133FAD]/20 mb-6">
-            <Sparkles className="w-5 h-5 text-[#6787d7] animate-spin-slow" />
-            <span className="text-sm font-semibold text-[#6787d7] tracking-wider uppercase">7 Star Gifts</span>
+        <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
+          }`}>
+          <div className="relative inline-flex items-center space-x-2 px-4 py-2 bg-white/60 rounded-full border border-gray-200 mb-6">
+            <span className="text-sm font-medium text-[#133FAD] tracking-wide">E-Brochure</span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-black/90 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
-              Honor for the Best
+            <span className="bg-gradient-to-r from-gray-900 via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent">
+              Our Product Catalog
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -380,206 +359,156 @@ const BrochureComponent = () => {
 
         {/* Brochure Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          {/* Left Side - Enhanced Unique Design */}
-          <div className={`transform transition-all duration-1000 delay-300 ${
-            isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
-          }`}>
-            <div className="relative">
-              {/* Floating Elements Background */}
-              <div className="absolute -top-8 -left-8 w-20 h-20 bg-gradient-to-br from-[#ED3237]/20 to-[#133FAD]/20 rounded-2xl rotate-45 animate-float"></div>
-              <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-gradient-to-br from-[#133FAD]/20 to-[#ED3237]/20 rounded-full animate-float-delayed"></div>
-              <div className="absolute top-1/2 -left-4 w-12 h-12 bg-gradient-to-br from-yellow-400/30 to-orange-500/30 rounded-xl rotate-12 animate-bounce-slow"></div>
-
-              {/* Main Content Card */}
-              <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-200/50 p-8 backdrop-blur-sm bg-white/90 overflow-hidden">
-                {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-5">
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#ED3237] to-[#133FAD] animate-pulse"></div>
-                  <div className="absolute top-4 left-4 w-8 h-8 border-2 border-[#ED3237] rounded-full animate-spin-slow"></div>
-                  <div className="absolute bottom-4 right-4 w-6 h-6 border-2 border-[#133FAD] rounded-full animate-spin-slow delay-1000"></div>
-                </div>
-
-                {/* Header with Floating Badge */}
-                <div className="relative mb-8">
-                  {/* <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-bounce-slow">
-                    PREMIUM
-                  </div> */}
-                  <h3 className="text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-[#ED3237] via-[#133FAD] to-[#ED3237] bg-clip-text animate-gradient-x">
-                    7 Star Gifts Brochure
-                  </h3>
-                  <div className="w-24 h-1 bg-gradient-to-r from-[#ED3237] to-[#133FAD] rounded-full mb-6 animate-pulse"></div>
-                </div>
-
-                {/* Description with Glass Effect */}
-                <div className="relative mb-8 p-6 rounded-2xl bg-gradient-to-br from-white/50 to-gray-50/50 border border-white/20 backdrop-blur-sm shadow-inner">
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    Explore our world of <span className="font-bold text-transparent bg-gradient-to-r from-[#ED3237] to-[#133FAD] bg-clip-text">exquisite metal craftsmanship</span> with our brochure, showcasing creations that honor the best.
-                  </p>
-                  {/* Floating Sparkles */}
-                  <Sparkles className="absolute top-2 right-2 w-5 h-5 text-[#6787d7] animate-pulse" />
-                  <Sparkles className="absolute bottom-2 left-2 w-4 h-4 text-[#ED3237] animate-pulse delay-500" />
-                </div>
-
-                {/* Interactive Feature Points */}
-                <div className="space-y-4 mb-8">
-                  {brochurePoints.map((point, index) => {
-                    const IconComponent = point.icon;
-                    return (
-                      <div
-                        key={index}
-                        className={`relative group cursor-pointer transition-all duration-500 transform hover:scale-105 ${
-                          hoveredPoint === index ? 'scale-105' : ''
-                        }`}
-                        onMouseEnter={() => setHoveredPoint(index)}
-                        onMouseLeave={() => setHoveredPoint(null)}
-                      >
-                        <div className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-white to-gray-50/50 border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:border-transparent">
-                          {/* Animated Icon Container */}
-                          <div className={`relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${point.gradient} shadow-lg transform group-hover:rotate-12 transition-all duration-300`}>
-                            <IconComponent className="w-7 h-7 text-white drop-shadow-lg" />
-                            {/* Icon Glow Effect */}
-                            <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${point.gradient} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`}></div>
-                          </div>
-                          
-                          {/* Content */}
-                          <div className="flex-1">
-                            <h4 className="font-bold text-gray-800 mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#ED3237] group-hover:to-[#133FAD] group-hover:bg-clip-text transition-all duration-300">
-                              {point.title}
-                            </h4>
-                            <p className="text-gray-600 text-sm">{point.description}</p>
-                          </div>
-
-                          {/* Hover Indicator */}
-                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#ED3237] to-[#133FAD] opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"></div>
-                        </div>
-
-                        {/* Animated Border Effect */}
-                        <div className={`absolute inset-0 rounded-2xl border-2 border-transparent transition-all duration-500 ${
-                          hoveredPoint === index ? `border-gradient-to-r from-[#ED3237] to-[#133FAD] shadow-lg` : ''
-                        }`}></div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Enhanced Download Button */}
-                <div className="relative">
-                  <button
-                    className="w-full px-8 py-6 bg-gradient-to-r from-[#ED3237] via-[#133FAD] to-[#ED3237] bg-size-200 bg-pos-0 hover:bg-pos-100 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-[#ED3237]/50 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 flex items-center justify-center space-x-3 group relative overflow-hidden"
-                    onClick={() => setIsFormOpen(true)}
-                  >
-                    {/* Button Background Animation */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                    
-                    <Download className="w-6 h-6 transform group-hover:translate-y-[-4px] group-hover:rotate-12 transition-all duration-300" />
-                    <span className="relative z-10">Download Exclusive Brochure</span>
-                    <Sparkles className="w-5 h-5 transform group-hover:rotate-180 transition-all duration-500" />
-                    
-                    {/* Floating Particles */}
-                    <div className="absolute top-2 left-8 w-1 h-1 bg-white rounded-full animate-ping delay-100"></div>
-                    <div className="absolute bottom-2 right-8 w-1 h-1 bg-white rounded-full animate-ping delay-300"></div>
-                  </button>
-                  
-                  {/* Button Glow Effect */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#ED3237] to-[#133FAD] opacity-0 hover:opacity-30 blur-2xl transition-opacity duration-300 -z-10"></div>
-                </div>
-
-                {/* Decorative Corner Elements */}
-                <div className="absolute top-4 left-4 w-8 h-8 border-l-4 border-t-4 border-[#ED3237]/30 rounded-tl-xl"></div>
-                <div className="absolute top-4 right-4 w-8 h-8 border-r-4 border-t-4 border-[#133FAD]/30 rounded-tr-xl"></div>
-                <div className="absolute bottom-4 left-4 w-8 h-8 border-l-4 border-b-4 border-[#133FAD]/30 rounded-bl-xl"></div>
-                <div className="absolute bottom-4 right-4 w-8 h-8 border-r-4 border-b-4 border-[#ED3237]/30 rounded-br-xl"></div>
+          {/* Left Side - Professional Content */}
+          <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
+            }`}>
+            <div className="space-y-8">
+              {/* Title Section */}
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                 Download Brochure To Know More
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Explore our comprehensive collection of premium metal awards, custom gifts, and recognition solutions crafted with exceptional attention to detail.
+                </p>
               </div>
 
-              {/* Additional Floating Elements */}
-              <div className="absolute top-8 right-4 w-3 h-3 bg-gradient-to-br from-[#ED3237] to-[#133FAD] rounded-full animate-pulse"></div>
-              <div className="absolute bottom-12 left-2 w-2 h-2 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full animate-bounce"></div>
+              {/* Features List */}
+              <div className="space-y-4">
+                {brochurePoints.map((point, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-2 h-2 bg-[#ED3237] rounded-full mt-2"></div>
+                    <span className="text-gray-700 text-base leading-relaxed">{point}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Button */}
+              {/* <div className="pt-4">
+                <button
+                  className="inline-flex items-center px-8 py-4 bg-[#133FAD] text-white font-semibold rounded-lg hover:bg-[#0f2d85] transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  onClick={() => setIsFormOpen(true)}
+                >
+                  <span>Download Brochure</span>
+                  <Download className="w-5 h-5 ml-3 transform group-hover:translate-y-0.5 transition-transform duration-200" />
+                </button>
+              </div> */}
+              <div className="">
+                <button onClick={() => setIsFormOpen(true)} className="group/main relative overflow-hidden inset-0 bg-gradient-to-r from-[#221F20]/80 to-slate-400 border-[#969394]/40 rounded-full px-8 py-4 transition-all duration-700 hover:border-transparent hover:shadow-2xl hover:shadow-[#133FAD]/20 transform hover:scale-105">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD]/20 via-[#ED3237]/20 to-[#221F20]/20 rounded-full transform scale-0 group-hover/main:scale-100 transition-transform duration-700 ease-out"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#ED3237]/30 to-[#133FAD]/30 rounded-full transform rotate-0 group-hover/main:rotate-180 transition-transform duration-1000 ease-in-out opacity-0 group-hover/main:opacity-100"></div>
+                  <div className="absolute inset-0 opacity-0 group-hover/main:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#133FAD] to-[#ED3237] rounded-full transform scale-x-0 group-hover/main:scale-x-100 transition-transform duration-800 ease-out origin-center opacity-80"></div>
+                  </div>
+                  <div className="relative z-10 flex items-center space-x-4">
+                    <span className="text-md font-bold text-[#d0cbcd] transition-all duration-500 inset-0 group-hover/main:text-white group-hover/main:tracking-wider group-hover/main:drop-shadow-lg">
+                      Download Brochure
+                    </span>
+                    <div className="relative">
+                      <Download className="w-6 h-6 text-[#d0cbcd] transition-all duration-700 group-hover/main:text-white group-hover/main:rotate-360 group-hover/main:scale-125" />
+                      <div className="absolute -inset-4 opacity-0 group-hover/main:opacity-100 transition-opacity duration-500">
+                        <div className="absolute top-0 left-1/2 w-1 h-1 bg-white rounded-full animate-ping transform -translate-x-1/2" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="absolute bottom-0 left-1/2 w-1 h-1 bg-white rounded-full animate-ping transform -translate-x-1/2" style={{ animationDelay: '0.6s' }}></div>
+                        <div className="absolute top-1/2 left-0 w-1 h-1 bg-white rounded-full animate-ping transform -translate-y-1/2" style={{ animationDelay: '0.4s' }}></div>
+                        <div className="absolute top-1/2 right-0 w-1 h-1 bg-white rounded-full animate-ping transform -translate-y-1/2" style={{ animationDelay: '0.8s' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 group-hover/main:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="absolute top-1/4 left-1/6 w-0.5 h-0.5 bg-white rounded-full animate-ping" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="absolute top-3/4 right-1/6 w-0.5 h-0.5 bg-white rounded-full animate-ping" style={{ animationDelay: '0.4s' }}></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-0.5 h-0.5 bg-white rounded-full animate-ping" style={{ animationDelay: '0.7s' }}></div>
+                    <div className="absolute top-1/6 right-1/3 w-0.5 h-0.5 bg-white rounded-full animate-ping" style={{ animationDelay: '0.9s' }}></div>
+                  </div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#133FAD]/0 via-[#ED3237]/0 to-[#133FAD]/0 group-hover/main:from-[#133FAD]/20 group-hover/main:via-[#ED3237]/20 group-hover/main:to-[#133FAD]/20 rounded-full blur-lg transition-all duration-700"></div>
+                </button>
+              </div>
+
+              {/* Additional Info */}
+              <div className="pt-6 border-t border-gray-200">
+                <p className="text-sm text-gray-500">
+                  Get instant access to our complete product catalog featuring detailed specifications, pricing, and customization options.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Right Side - Image (keeping your original design) */}
-          <div className={`relative transform transition-all duration-1000 delay-500 ${
-            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
-          }`}>
+          {/* Right Side - Image */}
+          <div className={`relative transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+            }`}>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#ED3237]/20 to-[#133FAD]/20 rounded-3xl transform rotate-6 scale-95 blur-sm group-hover:scale-100 group-hover:blur-none transition-all duration-500"></div>
               <div className="absolute -inset-2 bg-white rounded-2xl shadow-lg transform -rotate-3 scale-98 group-hover:scale-100 group-hover:rotate-0 transition-all duration-500 border border-gray-200/50"></div>
               <div className="relative rounded-2xl overflow-hidden border border-gray-200/50 shadow-xl group">
                 <img
-                  src="https://via.placeholder.com/600x800.png?text=7+Star+Gifts+Brochure"
+                  src={cover}
                   alt="7 Star Gifts Brochure Cover"
-                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-[560px] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 shimmer"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#ED3237]/10 to-[#133FAD]/10 opacity-0 group-hover:opacity-80 transition-opacity duration-500 backdrop-blur-sm"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-[#ED3237]/10 to-[#133FAD]/10 opacity-0 group-hover:opacity-80 transition-opacity duration-500 backdrop-blur-sm"></div> */}
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#ED3237]/50 group-hover:shadow-[0_0_20px_rgba(237,50,55,0.4)] transition-all duration-500 rounded-2xl"></div>
-                <div className="absolute top-4 left-4 w-6 h-6 animate-float">
-                  <Sparkles className="w-6 h-6 text-[#6787d7] group-hover:text-[#ED3237] transition-all duration-500" />
-                </div>
-                <div className="absolute bottom-4 right-4 w-6 h-6 animate-float-delayed">
-                  <Sparkles className="w-6 h-6 text-[#6787d7] group-hover:text-[#ED3237] transition-all duration-500" />
-                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Form Modal (keeping your original) */}
+        {/* Form Modal */}
         {isFormOpen && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50">
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4">
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="relative bg-white rounded-xl shadow-2xl p-8 max-w-md w-full mx-4">
               <button
-                className="absolute top-4 right-4 p-2 bg-gradient-to-br from-[#ED3237] to-[#133FAD] rounded-full text-white hover:scale-110 transition-all duration-300"
+                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-all duration-200"
                 onClick={() => setIsFormOpen(false)}
               >
                 <X className="w-5 h-5" />
               </button>
-              <h3 className="text-2xl font-bold mb-6 text-transparent bg-gradient-to-r from-[#ED3237] to-[#133FAD] bg-clip-text">
-                Download 7 Star Gifts Brochure
+              <h3 className="text-2xl font-bold mb-2 text-gray-900">
+                Download Brochure
               </h3>
+              <p className="text-gray-600 mb-6">Please provide your details to receive the brochure.</p>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ED3237] transition-all duration-300"
-                    placeholder="Enter your name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#133FAD] focus:border-transparent transition-all duration-200"
+                    placeholder="Enter your full name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ED3237] transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#133FAD] focus:border-transparent transition-all duration-200"
                     placeholder="Enter your phone number"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ED3237] transition-all duration-300"
-                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#133FAD] focus:border-transparent transition-all duration-200"
+                    placeholder="Enter your email address"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full px-6 py-3 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#ED3237]/30 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 ${
-                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-500 transition-all duration-200 flex items-center justify-center space-x-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'shadow-lg hover:shadow-xl'
+                    }`}
                 >
                   {isSubmitting ? (
                     <>
@@ -588,7 +517,7 @@ const BrochureComponent = () => {
                     </>
                   ) : (
                     <>
-                      <span>Submit</span>
+                      <span>Get Brochure</span>
                       <Send className="w-5 h-5" />
                     </>
                   )}
@@ -600,16 +529,16 @@ const BrochureComponent = () => {
 
         {/* Success Toast */}
         {showToast && (
-          <div className="fixed top-4 right-4 bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-toast-in">
+          <div className="fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-toast-in">
             <p className="text-sm font-medium">Brochure download link sent successfully!</p>
           </div>
         )}
 
-        {/* Pulsing Dots */}
-        <div className="flex justify-center mt-20 space-x-3">
-          <div className="w-4 h-4 bg-[#ED3237] rounded-full animate-pulse shadow-lg"></div>
-          <div className="w-4 h-4 bg-[#133FAD] rounded-full animate-pulse shadow-lg" style={{ animationDelay: '0.3s' }}></div>
-          <div className="w-4 h-4 bg-[#ED3237] rounded-full animate-pulse shadow-lg" style={{ animationDelay: '0.6s' }}></div>
+        {/* Simple Footer Dots */}
+        <div className="flex justify-center mt-20 space-x-2">
+          <div className="w-2 h-2 bg-[#133FAD] rounded-full"></div>
+          <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+          <div className="w-2 h-2 bg-[#ED3237] rounded-full"></div>
         </div>
       </div>
 
@@ -621,37 +550,6 @@ const BrochureComponent = () => {
         .shimmer {
           animation: shimmer 2s infinite;
         }
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-8px); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-          animation: float 3s ease-in-out infinite 1s;
-        }
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0) rotate(12deg); }
-          50% { transform: translateY(-10px) rotate(12deg); }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 4s ease-in-out infinite;
-        }
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
-        }
-        @keyframes gradient-x {
-          0%, 100% { background-size: 200% 200%; background-position: left center; }
-          50% { background-size: 200% 200%; background-position: right center; }
-        }
-        .animate-gradient-x {
-          animation: gradient-x 3s ease infinite;
-        }
         @keyframes toast-in {
           0% { transform: translateY(-20px); opacity: 0; }
           100% { transform: translateY(0); opacity: 1; }
@@ -659,9 +557,6 @@ const BrochureComponent = () => {
         .animate-toast-in {
           animation: toast-in 0.5s ease-out;
         }
-        .bg-size-200 { background-size: 200% 100%; }
-        .bg-pos-0 { background-position: 0% 50%; }
-        .bg-pos-100 { background-position: 100% 50%; }
       `}</style>
     </div>
   );

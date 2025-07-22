@@ -16,7 +16,7 @@ const AboutPage = () => {
             // {label: "Pages", href: "/pages" }
             // {label: "About Us", href: "/about" }
             // ]
-            backgroundImage = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            // backgroundImage = "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             />
             <AboutComponent />
             <VisionMissionComponent />

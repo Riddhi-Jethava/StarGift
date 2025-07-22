@@ -12,6 +12,7 @@ import GalleryPage from './Pages/GalleryPage';
 import EBrochurePage from './Pages/EBrochurePage';
 import ContactPage from './Pages/ContactPage';
 import ProductsPage from './Pages/ProductsPage';
+import ScrollToTop from './StaticComponents/ScrollToTop';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
     <div>
       <Header />
       <WhatsApp3DButton />
+      <ScrollToTop />
       {/* <LeafFall /> */}
       <Routes>
         <Route path='/' element={<HomePage />} />

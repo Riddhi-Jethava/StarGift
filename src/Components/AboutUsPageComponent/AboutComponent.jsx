@@ -64,7 +64,7 @@
 //           </h1>
 
 //           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-//             At Radhey Exim, we transform premium metals into prestigious awards, trophies, and memorable gifts that celebrate achievements and milestones.
+//             At 7 Star Gifts, we transform premium metals into prestigious awards, trophies, and memorable gifts that celebrate achievements and milestones.
 //           </p>
 //         </div>
 
@@ -119,7 +119,7 @@
 //             <div className="mb-8">
 //               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
 //                 <span className="text-transparent bg-gradient-to-r from-[#ED3237] to-[#133FAD] bg-clip-text">
-//                   Radhey Exim
+//                   7 Star Gifts
 //                 </span>
 //               </h2>
 //               <p className="text-gray-600 text-md leading-relaxed">
@@ -246,7 +246,7 @@ const AboutComponent = () => {
             </span>
           </h2>
           <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            At Radhey Exim, we transform premium metals into prestigious awards, trophies, and memorable gifts that celebrate achievements and milestones.
+            At 7 Star Gifts, we transform premium metals into prestigious awards, trophies, and memorable gifts that celebrate achievements and milestones.
           </p>
         </div>
 
@@ -259,13 +259,13 @@ const AboutComponent = () => {
               <div className="absolute top-8 left-8 w-72 h-72 bg-gradient-to-br from-[#133FAD]/5 to-[#ED3237]/5 rounded-2xl"></div>
 
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-                <div className="h-180 flex items-center justify-center p-5">
+                <div className="h-100 md:h-180 flex items-center justify-center p-5">
                   <img src={about} alt="" className='h-full w-full rounded-2xl'/>
                 </div>
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div> */}
               </div>
 
-              <div className={`absolute -bottom-16 -right-16 w-40 h-40 bg-white rounded-2xl shadow-2xl border border-gray-200 transform transition-all duration-1000 delay-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
+              <div className={`absolute -bottom-16 right-0 md:-right-16 w-30 md:w-40 h-30 md:h-40 bg-white rounded-2xl shadow-2xl border border-gray-200 transform transition-all duration-1000 delay-700 ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
                 }`}>
                 <div className="w-full h-full bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center border-4 border-white">
                   <div className="text-center space-y-2">
@@ -285,7 +285,7 @@ const AboutComponent = () => {
             <div className="mb-8">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 <span className="text-transparent bg-gradient-to-r from-[#ED3237] to-[#133FAD] bg-clip-text">
-                  Radhey Exim
+                  7 Star Gifts
                 </span>
               </h2>
               <p className="text-gray-600 text-md leading-relaxed">

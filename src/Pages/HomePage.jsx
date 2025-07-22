@@ -15,8 +15,8 @@ const HomePage = () => {
     <div>
       <HeroSlider />
       <CategoryShowcase />
-      <AboutUs />
       <Banner />
+      <AboutUs />
       <PopularGiftCategories />
       <WhyChooseUs />
       <BestSellers />

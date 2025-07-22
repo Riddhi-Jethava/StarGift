@@ -10,6 +10,14 @@ import {
   Handshake,
   Sparkles
 } from 'lucide-react';
+import logo1 from '../../assets/AboutImg/logo (1).jpeg'
+import logo2 from '../../assets/AboutImg/logo (1).jpg'
+import logo3 from '../../assets/AboutImg/logo (1).png'
+import logo4 from '../../assets/AboutImg/logo (2).jpg'
+import logo5 from '../../assets/AboutImg/logo (2).png'
+import logo6 from '../../assets/AboutImg/logo (3).jpg'
+import logo7 from '../../assets/AboutImg/logo (3).png'
+import logo8 from '../../assets/AboutImg/logo (4).png'
 
 const ClientsLogoComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,56 +33,56 @@ const ClientsLogoComponent = () => {
       id: 1,
       name: "TechCorp Solutions",
       category: "Technology",
-      logo: "https://via.placeholder.com/100?text=TechCorp",
+      logo: logo1,
       color: "from-blue-500 to-blue-700"
     },
     {
       id: 2,
       name: "Global Industries",
       category: "Manufacturing",
-      logo: "https://via.placeholder.com/100?text=Global",
+      logo: logo2,
       color: "from-green-500 to-green-700"
     },
     {
       id: 3,
       name: "Premier Bank",
       category: "Banking",
-      logo: "https://via.placeholder.com/100?text=Premier",
+      logo: logo3,
       color: "from-purple-500 to-purple-700"
     },
     {
       id: 4,
       name: "Sports Academy",
       category: "Sports",
-      logo: "https://via.placeholder.com/100?text=Sports",
+      logo: logo4,
       color: "from-orange-500 to-orange-700"
     },
     {
       id: 5,
       name: "Education Plus",
       category: "Education",
-      logo: "https://via.placeholder.com/100?text=Education",
+      logo: logo5,
       color: "from-teal-500 to-teal-700"
     },
     {
       id: 6,
       name: "Healthcare Group",
       category: "Healthcare",
-      logo: "https://via.placeholder.com/100?text=Healthcare",
+      logo: logo6,
       color: "from-pink-500 to-pink-700"
     },
     {
       id: 7,
       name: "Auto Motors",
       category: "Automotive",
-      logo: "https://via.placeholder.com/100?text=Auto",
+      logo: logo7,
       color: "from-indigo-500 to-indigo-700"
     },
     {
       id: 8,
       name: "Retail Chain",
       category: "Retail",
-      logo: "https://via.placeholder.com/100?text=Retail",
+      logo: logo8,
       color: "from-yellow-500 to-yellow-700"
     }
   ];
@@ -117,7 +125,7 @@ const ClientsLogoComponent = () => {
             </span>
           </h2>
           <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Trusted by leading organizations worldwide, Radhey Exim has been crafting premium metal gifts and awards for distinguished clients across various industries.
+            Trusted by leading organizations worldwide, 7 Star Gifts has been crafting premium metal gifts and awards for distinguished clients across various industries.
           </p>
         </div>
 
@@ -146,7 +154,7 @@ const ClientsLogoComponent = () => {
                   onMouseLeave={() => setHoveredLogo(null)}
                 >
                   {/* Logo Container */}
-                  <div className={`relative bg-white rounded-md shadow-lg border border-gray-200 p-6 h-32 flex flex-col items-center justify-center transition-all duration-500 group-hover:shadow-md ${
+                  <div className={`relative bg-white overflow-hidden rounded-md shadow-lg border border-gray-200 p-6 h-32 flex flex-col items-center justify-center transition-all duration-500 group-hover:shadow-md ${
                     hoveredLogo === client.id ? 'border-[#ED3237]/30' : ''
                   }`}>
                     
@@ -154,7 +162,7 @@ const ClientsLogoComponent = () => {
                     <img
                       src={client.logo}
                       alt={client.name}
-                      className={`w-16 h-16 object-contain rounded-lg mb-3 transition-all duration-500 transform group-hover:scale-110 ${
+                      className={`w-40  object-cover rounded-lg mb-3 transition-all duration-500 transform group-hover:scale-110 ${
                         hoveredLogo === client.id ? 'shadow-lg' : ''
                       }`}
                     />

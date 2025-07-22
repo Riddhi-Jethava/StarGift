@@ -319,9 +319,9 @@ const LanguageSelector = () => {
       {/* Dropdown Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gradient-to-r from-gray-800 to-slate-400 px-6 py-2 rounded-full text-white cursor-pointer transition flex justify-between items-center hover:from-[#ED3237]/10 hover:to-[#133FAD]/10 hover:border-[#ED3237]/20"
+        className="bg-gradient-to-r from-gray-800 to-slate-400 px-6 py-2 rounded-full text-white cursor-pointer transition flex justify-between items-center hover:from-[#ED3237]/60 hover:to-[#133FAD]/60 hover:border-[#ED3237]/20"
       >
-       <span className="flex items-center gap-3" > Select <LuLanguages/></span> <BiChevronDown size={22} />
+       <span className="hidden md:flex items-center gap-3" > Select </span> <LuLanguages/> <BiChevronDown size={22} />
       </button>
   
       {/* Dropdown List */}

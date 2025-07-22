@@ -191,7 +191,7 @@ const ProductShowcase = () => {
           <div className="mb-8">
             <button
               onClick={handleBack}
-              className="flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-full hover:bg-gradient-to-r hover:from-[#ED3237] hover:to-[#133FAD] hover:text-white transition-all duration-300 group"
+              className="flex items-center space-x-2 cursor-pointer px-4 py-2 bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-full hover:bg-gradient-to-r hover:from-gray-700 to-gray-500 hover:text-white transition-all duration-300 group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:translate-x-[-4px] transition-transform duration-300" />
               <span>Back</span>
@@ -225,11 +225,6 @@ const ProductShowcase = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-[#ED3237]/20 via-transparent to-[#133FAD]/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                         
-                        {/* Icon Overlay */}
-                        <div className={`absolute top-4 right-4 w-12 h-12 bg-gradient-to-br ${category.gradient} rounded-full flex items-center justify-center shadow-lg transform scale-0 group-hover:scale-100 transition-all duration-500`}>
-                          <IconComponent className="w-6 h-6 text-white" />
-                        </div>
-                        
                         {/* Sparkle Effects */}
                         <div className="absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div className="absolute bottom-4 left-4 w-1 h-1 bg-white rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -253,8 +248,8 @@ const ProductShowcase = () => {
                     </div>
 
                     {/* Floating Elements */}
-                    <div className="absolute -top-2 -left-2 w-4 h-4 bg-gradient-to-br from-[#ED3237] to-[#133FAD] rounded-full opacity-0 group-hover:opacity-100 animate-bounce transition-opacity duration-300"></div>
-                    <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gradient-to-br from-[#133FAD] to-[#ED3237] rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div>
+                    {/* <div className="absolute -top-2 -left-2 w-4 h-4 bg-gradient-to-br from-[#ED3237] to-[#133FAD] rounded-full opacity-0 group-hover:opacity-100 animate-bounce transition-opacity duration-300"></div>
+                    <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gradient-to-br from-[#133FAD] to-[#ED3237] rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div> */}
                   </div>
                 </div>
               );
@@ -349,7 +344,7 @@ const ProductShowcase = () => {
               <div className="relative">
                 {/* Product Name */}
                 <h1 className="text-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-[#ED3237] via-[#133FAD] to-[#ED3237] bg-clip-text text-transparent animate-gradient-x">
+                  <span className="bg-gradient-to-r from-gray-700 to-gray-500 bg-clip-text text-transparent">
                     {selectedProduct.name}
                   </span>
                 </h1>
@@ -372,7 +367,7 @@ const ProductShowcase = () => {
                     <button
                       className={`flex-1 px-6 py-4 font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
                         activeTab === 'specification'
-                          ? 'bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white'
+                          ? ' bg-gray-500  text-white'
                           : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
                       }`}
                       onClick={() => setActiveTab('specification')}
@@ -383,7 +378,7 @@ const ProductShowcase = () => {
                     <button
                       className={`flex-1 px-6 py-4 font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
                         activeTab === 'materials'
-                          ? 'bg-gradient-to-r from-[#ED3237] to-[#133FAD] text-white'
+                          ? 'bg-gray-500 text-white'
                           : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
                       }`}
                       onClick={() => setActiveTab('materials')}

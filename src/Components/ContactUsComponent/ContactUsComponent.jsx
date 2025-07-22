@@ -62,14 +62,14 @@ const ContactUsComponent = () => {
       title: "Email",
       detail: "7stargifts@gmail.com",
       info: "Drop a line",
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-[#ED3237] to-[#133FAD]"
     },
     {
       icon: Clock,
       title: "Office Hours",
       detail: "Mon - Sat: 9AM - 6PM",
       info: "Sunday: Closed",
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-[#133FAD] to-[#ED3237]"
     }
   ];
 

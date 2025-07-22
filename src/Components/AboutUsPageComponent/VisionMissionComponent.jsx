@@ -87,7 +87,7 @@ const VisionMissionComponent = () => {
             </span>
           </h2>
           <p data-aos="zoom-in-up" className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the driving force behind Radhey Exim's commitment to excellence in metal craftsmanship and our journey towards becoming the world's most trusted metal gifts manufacturer.
+            Discover the driving force behind 7 Star Gifts's commitment to excellence in metal craftsmanship and our journey towards becoming the world's most trusted metal gifts manufacturer.
           </p>
         </div>
 
